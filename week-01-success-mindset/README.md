@@ -33,7 +33,14 @@ You will reuse this in later weeks. So do it properly once.
 
 ## Answer
 
-Add your answer here...
+I believe that consistency is far more valuable than talent. Many people around me think success comes from being naturally gifted, having connections, or waiting for the perfect opportunity. I disagree. I believe that showing up every day, even for a short period, compounds into remarkable results over time.
+
+This belief has become stronger as I transitioned from Microsoft 365 Cloud Support into Software Engineering and DevOps. Learning cloud technologies, Linux, Git, networking, and automation is not something that happens overnight. It requires patience, discipline, and a willingness to improve a little every day.
+
+I also believe that publicly documenting what you learn is one of the fastest ways to grow professionally. Many people hesitate because they fear criticism or believe they must become experts first. I see it differently. Sharing my learning journey helps me understand concepts better, builds credibility, and creates proof of my skills over time.
+
+To me, long-term consistency always beats short-term intensity—in my career, personal life, and health.
+
 
 ---
 
@@ -55,11 +62,11 @@ Write each truth in this format:
 
 ### Truth
 
-Add your answer here...
+Small, consistent effort produces better long-term results than occasional bursts of motivation.
 
 ### Evidence from my life
 
-Add your answer here...
+While learning cloud technologies and DevOps, I noticed that studying for a short, focused period several times a week helped me retain concepts much better than trying to study for many hours only once in a while. The more consistent I became, the more confident I grew and the easier it was to build on previous knowledge.
 
 ---
 
@@ -67,11 +74,11 @@ Add your answer here...
 
 ### Truth
 
-Add your answer here...
+Practical experience creates deeper understanding than passive learning.
 
 ### Evidence from my life
 
-Add your answer here...
+I discovered that watching tutorials alone was not enough. When I started completing hands-on labs, setting up development environments, and practicing with real tools, I understood concepts much better. Applying what I learned gave me confidence that theory alone could not provide.
 
 ---
 
@@ -79,11 +86,11 @@ Add your answer here...
 
 ### Truth
 
-Add your answer here...
+Discipline creates opportunities that motivation alone cannot sustain.
 
 ### Evidence from my life
 
-Add your answer here...
+Working as a Microsoft 365 Cloud Support Specialist while learning Software Engineering and DevOps required careful time management. There were many days when I did not feel motivated, but following a routine allowed me to continue learning. Over time, this discipline helped me gain new technical skills and move closer to my goal of becoming a DevOps Engineer.
 
 ---
 
@@ -135,11 +142,32 @@ Include this line:
 
 ## Your Article
 
-Add your answer here...
+## Anthonia Akwuohia: Building Reliable Cloud Solutions Through DevOps Excellence
+
+Three years ago, Anthonia Akwuohia made a deliberate decision to transition from Microsoft 365 Cloud Support into Software Engineering and DevOps. Rather than chasing shortcuts or relying solely on certifications, she committed to building practical skills through consistent learning, hands-on projects, and public documentation of her progress.
+
+That decision transformed her career.
+
+Anthonia established herself as a skilled DevOps Engineer with strong expertise in Linux, Git, GitHub, Docker, Kubernetes, Terraform, CI/CD pipelines, cloud computing, and Infrastructure as Code. She built multiple real-world projects that demonstrated her ability to automate deployments, provision cloud infrastructure, and deliver scalable, reliable solutions.
+
+Her GitHub portfolio became a collection of production-ready projects, complete with clear documentation, architecture diagrams, and deployment guides. Recruiters and hiring managers could easily verify her technical abilities through the quality of her work rather than relying only on her résumé.
+
+She earned respected cloud and DevOps certifications that complemented her practical experience, strengthening her credibility while proving her commitment to continuous learning. Instead of collecting certificates for their own sake, she used them to reinforce the knowledge she had already gained through hands-on practice.
+
+Beyond technical skills, Anthonia became known for her discipline, consistency, and professional communication. She regularly published technical articles and learning reflections on LinkedIn, helping other aspiring engineers understand cloud technologies and DevOps concepts. Her willingness to share both challenges and successes inspired many professionals beginning similar career transitions.
+
+Within her organization, she contributed to improving deployment processes, automating repetitive tasks, and promoting DevOps best practices. She collaborated effectively with developers, cloud engineers, and operations teams to deliver reliable and secure infrastructure while reducing manual effort and deployment time.
+
+Anthonia also became an active member of the DevOps community, mentoring beginners, contributing to open-source projects, participating in technical discussions, and continuously expanding her knowledge. Her reputation was built on integrity, quality, and consistent execution rather than promises or shortcuts.
+
+Today, Anthonia is recognized as a dependable DevOps professional who combines strong technical expertise with a growth mindset. Her journey demonstrates that long-term consistency, continuous improvement, and visible proof of work can transform an ordinary career into an extraordinary one.
+
+
+**P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). You can start your DevOps journey by joining this [Discord community](https://discord.pravinmishra.com/) ( https://discord.pravinmishra.com/ ).**
 
 ### Public Link
 
-Paste your link here:
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_building-reliable-cloud-solutions-through-share-7478430251426156544-Zsdf/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 `__________________________`
 
@@ -167,13 +195,13 @@ This is about self-awareness, not judgment.
 
 **Yes / No**
 
-If Yes:
+If Yes: Yes
 
 **What emotion did you feel?** (minimum 50–100 words)
 
 ## Answer
 
-Add your answer here...
+There were times when I chose the easier path instead of putting in the effort to fully understand a task. Although it saved time initially, I later realized it limited my learning and left me feeling dissatisfied because I hadn't truly earned the outcome. That experience taught me that real growth comes from doing the work honestly. As I pursue a career in DevOps, I am committed to building my skills with integrity, consistency, and hands-on practice rather than relying on shortcuts.
 
 ---
 
@@ -199,16 +227,45 @@ Choose books that improve:
 
 ## Book List
 
-1. Add your answer here...
-2. Add your answer here...
-3. Add your answer here...
-4. Add your answer here...
-5. Add your answer here...
-6. Add your answer here...
-7. Add your answer here...
-8. Add your answer here...
-9. Add your answer here...
-10. Add your answer here...
+1. Getting Things Done — David Allen
+
+![Assignment 5 Screenshot](screenshots/Getting%20things%20Done.jpg)
+
+2. Deep Work — Cal Newport
+
+![Assignment 5 Screenshot](screenshots/Deep%20Work.jpg)
+
+3. Atomic Habits — James Clear
+
+![Assignment 5 Screenshot](screenshots/Atomic%20Habit.jpg)
+
+4. The 7 Habits of Highly Effective People — Stephen R. Covey
+
+![Assignment 5 Screenshot](screenshots/The%207%20Habits%20of%20Highly%20Effective%20People.jpg)
+
+5. The Psychology of Money — Morgan Housel
+
+![Assignment 5 Screenshot](screenshots/The%20Psychology%20of%20Money.jpg)
+
+6. The Lean Startup — Eric Ries
+
+![Assignment 5 Screenshot](screenshots/The%20Lean%20Startup.jpg)
+
+7. The Phoenix Project — Gene Kim, Kevin Behr & George Spafford
+
+![Assignment 5 Screenshot](screenshots/The%20Phoenix%20Project.jpg)
+
+8. The DevOps Handbook — Gene Kim, Jez Humble, Patrick Debois & John Willis
+
+![Assignment 5 Screenshot](screenshots/The%20DevOps%20Handbook.jpg)
+
+9. Designing Data-Intensive Applications — Martin Kleppmann
+
+![Assignment 5 Screenshot](screenshots/Designing%20Data-Intensive%20Applications.jpg)
+
+10. Lateral Thinking — Edward de Bono
+
+![Assignment 5 Screenshot](screenshots/Lateral%20Thinking.jpg)
 
 ---
 
@@ -237,16 +294,16 @@ List topics only. No need to share numbers.
 
 ## My Metrics
 
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
+* Weekly learning hours - To ensure I consistently dedicate time to learning DevOps, cloud technologies, and software engineering concepts.
+* Deep work sessions completed - To track focused, distraction-free study and project time that improves productivity.
+* DevOps projects completed and documented - To measure practical experience and build a portfolio that demonstrates my skills.
+* GitHub contributions and portfolio updates - To maintain a visible record of my progress, code, and technical growth.
+* LinkedIn posts or technical articles published - To reinforce my learning, build my professional brand, and share knowledge with others.
+* Certifications and technical milestones achieved - To monitor my progress toward industry-recognized credentials and career goals.
+* Sleep quality and daily exercise - To maintain the physical and mental energy needed for consistent performance.
+* Personal finances (spending, savings, and investments) - To develop healthy financial habits and support my long-term career growth.
+* Time spent on productive work versus distractions - To improve focus and reduce activities that do not contribute to my goals.
+* Weekly review of goals, habits, and overall progress - To reflect on what worked, identify areas for improvement, and plan the next week's priorities.
 
 ---
 
@@ -272,7 +329,7 @@ Examples:
 
 Answer:
 
-Add your answer here...
+Yes
 
 ---
 
@@ -290,7 +347,16 @@ Example:
 
 #### My Weekly Routine
 
-Add your answer here...
+Monday–Friday:
+• 60–90 minutes of focused DevOps learning after work
+• Complete DMI assignments
+• Build hands-on projects
+• Update GitHub repositories
+• Document what I learned
+
+Saturday: Attend DMI full session, write documentation, Take accurate note.
+
+Sunday: Review weekly progress, plan the coming week, organize study materials, and reflect on lessons learned.
 
 ---
 
@@ -298,11 +364,13 @@ Add your answer here...
 
 #### When Will You Do DMI Work? (Days + Time)
 
-Add your answer here...
+Monday–Friday: 10AM – 11:30AM
+
+Saturday: 5:20 AM – 2:00 PM
 
 #### How Many Sessions Per Week?
 
-Add your answer here...
+6 focused learning sessions per week
 
 ---
 
@@ -316,7 +384,11 @@ Examples:
 
 #### My Distraction Rules
 
-Add your answer here...
+Keep my phone on silent or Do Not Disturb during study sessions.
+Turn off unnecessary notifications.
+Avoid social media until my daily learning session is completed.
+Study in a quiet workspace with only the required applications open.
+Use a timer to maintain 60–90 minute deep work sessions followed by short breaks.
 
 ---
 
@@ -324,19 +396,19 @@ Add your answer here...
 
 ### Biggest insight I got about myself this week
 
-Add your answer here...
+I realized that long-term success is built through systems, consistency, and discipline rather than motivation. Every small action I repeat daily contributes to the professional I will become in the future.
 
 ### My biggest weakness/loop I noticed
 
-Add your answer here...
+I sometimes spend too much time trying to make everything perfect before taking action. This can slow my progress. I need to focus on consistent execution, learning from feedback, and improving through iteration.
 
 ### One system I will implement from this week (exact habit + time)
 
-Add your answer here...
+From this week onward, I will dedicate 10:00 AM to 11:30AM every weekday to uninterrupted DevOps learning and hands-on practice. During this period, my phone will remain on silent, distractions will be eliminated, and I will focus on completing one clearly defined learning objective each session.
 
 ### LinkedIn Post
 
-Paste your LinkedIn post link here:
+ https://www.linkedin.com/feed/update/urn:li:activity:7478463151433252864/
 
 `__________________________`
 
@@ -344,8 +416,8 @@ Paste your LinkedIn post link here:
 
 ## 10. Proof of Work
 
-- LinkedIn Post URL: **ADD LINK HERE**  
-- Blog / Medium : **ADD LINK HERE**  
+- LinkedIn Post URL: **[LinkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:7478430253514821632/)**
+- Blog / Medium : **[Blog Post](https://medium.com/@anthoniaakwuohia/how-to-break-into-tech-without-losing-yourself-0a96eb6f9781/)**  
 
 ---
 
