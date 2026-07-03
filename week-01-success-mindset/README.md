@@ -169,7 +169,7 @@ Today, Anthonia is recognized as a dependable DevOps professional who combines s
 
 https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_building-reliable-cloud-solutions-through-share-7478430251426156544-Zsdf/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
-`__________________________`
+
 
 ---
 
@@ -364,7 +364,7 @@ Sunday: Review weekly progress, plan the coming week, organize study materials, 
 
 #### When Will You Do DMI Work? (Days + Time)
 
-Monday–Friday: 8:00PM – 9:30PM
+Monday–Friday: 8:00 PM – 9:30 PM
 
 Saturday: 5:30 AM – 1:30 PM
 
@@ -404,13 +404,13 @@ I sometimes spend too much time trying to make everything perfect before taking 
 
 ### One system I will implement from this week (exact habit + time)
 
-From this week onward, I will dedicate 8:00 PM to 9:30PM every weekday to uninterrupted DevOps learning and hands-on practice. During this period, my phone will remain on silent, distractions will be eliminated, and I will focus on completing one clearly defined learning objective each session.
+From this week onward, I will dedicate 8:00 PM to 9:30 PM every weekday to uninterrupted DevOps learning and hands-on practice. During this period, my phone will remain on silent, distractions will be eliminated, and I will focus on completing one clearly defined learning objective each session.
 
 ### LinkedIn Post
 
  https://www.linkedin.com/feed/update/urn:li:activity:7478463151433252864/
 
-`__________________________`
+
 
 ---
 
