@@ -15,7 +15,7 @@
 | | |
 |---|---|
 | **Name** | Anthonia Akwuohia |
-| **LinkedIn** | [Anthonia-Akwuohia-DevOps-Intern](https://www.linkedin.com/in/anthonia-akwuohia-5b00681b0/) |
+| **LinkedIn** | [Anthonia-Akwuohia-DevOps-Engineer](https://www.linkedin.com/in/anthonia-akwuohia-5b00681b0/) |
 | **Location** | Lagos, Nigeria |
 | **Background** | Microsoft 365 Cloud Support Specialist with a foundation in Software Engineering |
 | **Goal** | To become a DevOps Engineer by building hands-on experience with cloud technologies, automation, and real-world projects  |
