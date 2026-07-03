@@ -364,9 +364,9 @@ Sunday: Review weekly progress, plan the coming week, organize study materials, 
 
 #### When Will You Do DMI Work? (Days + Time)
 
-Monday–Friday: 10AM – 11:30AM
+Monday–Friday: 8:00PM – 9:30PM
 
-Saturday: 5:20 AM – 2:00 PM
+Saturday: 5:30 AM – 1:30 PM
 
 #### How Many Sessions Per Week?
 
@@ -404,7 +404,7 @@ I sometimes spend too much time trying to make everything perfect before taking 
 
 ### One system I will implement from this week (exact habit + time)
 
-From this week onward, I will dedicate 10:00 AM to 11:30AM every weekday to uninterrupted DevOps learning and hands-on practice. During this period, my phone will remain on silent, distractions will be eliminated, and I will focus on completing one clearly defined learning objective each session.
+From this week onward, I will dedicate 8:00 PM to 9:30PM every weekday to uninterrupted DevOps learning and hands-on practice. During this period, my phone will remain on silent, distractions will be eliminated, and I will focus on completing one clearly defined learning objective each session.
 
 ### LinkedIn Post
 
