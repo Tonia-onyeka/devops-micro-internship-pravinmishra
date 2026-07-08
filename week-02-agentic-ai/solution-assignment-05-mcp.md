@@ -20,9 +20,11 @@ Generate a GitHub Personal Access Token (PAT) that will be used for MCP authenti
 
 #### Screenshot 1 — GitHub token creation (scopes only)
 
-Add your screenshot here.
 
----
+![Task 1 Screenshot 1](screenshots/Assignment5.Task1.jpg)
+
+
+![Task 1 Screenshot 1](screenshots/Assignment5.Task1i.jpg)
 
 # Task 2 — Create .mcp.json at the Project Root
 
@@ -34,9 +36,9 @@ Create and configure the `.mcp.json` file to define the GitHub MCP server.
 
 #### Screenshot 2 — .mcp.json configuration in VS Code
 
-Add your screenshot here.
 
----
+![Task 2 Screenshot 2](screenshots//Assignment5.Task2.jpg)
+
 
 # Task 3 — Add Your Token to settings.local.json
 
@@ -48,9 +50,9 @@ Store your GitHub token securely in `.claude/settings.local.json` and ensure it 
 
 #### Screenshot 3 — settings.local.json (token hidden/blurred)
 
-Add your screenshot here.
 
----
+![Task 3 Screenshot 3](screenshots/Assignment5.Task3.jpg)
+
 
 # Task 4 — Verify the Connection with /mcp
 
@@ -62,9 +64,9 @@ Confirm that the GitHub MCP server is successfully connected inside Claude Code.
 
 #### Screenshot 4 — /mcp output showing GitHub connected
 
-Add your screenshot here.
 
----
+![Task 4 Screenshot 4](screenshots/Assignment5.Task4.jpg)
+
 
 # Task 5 — Run a Live GitHub Query
 
@@ -76,9 +78,11 @@ Verify MCP functionality by retrieving real-time data from your GitHub account u
 
 #### Screenshot 5 — Claude response showing real GitHub repositories
 
-Add your screenshot here.
 
----
+![Task 5 Screenshot 5](screenshots/Assignment5.Task5.jpg)
+
+![Task 5 Screenshot 5](screenshots/Assignment5.Task5i.jpg)
+
 
 # Submission Instructions
 
@@ -92,15 +96,15 @@ Add your screenshot here.
 
 ## GitHub Repository URL
 
-Paste your forked repository URL here:
 
-`__________________________`
+https://github.com/Tonia-onyeka/Ultimate-Agentic-DevOps-with-Claude-Code.git
 
----
+
+
 
 ## Security Confirmation
 
-Confirm below:
+Confirm below: YES
 
 - [ ] `settings.local.json` is added to `.gitignore`
 - [ ] GitHub token is NOT exposed in repository or screenshots

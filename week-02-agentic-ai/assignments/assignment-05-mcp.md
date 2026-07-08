@@ -1,4 +1,4 @@
-# Assignment 5: Connecting Claude to the Outside World
+ # Assignment 5: Connecting Claude to the Outside World
 
 ---
 

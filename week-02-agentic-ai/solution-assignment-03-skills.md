@@ -20,9 +20,9 @@ Create the required `.claude/skills/` directory structure for all skills.
 
 #### Screenshot 1 — Skills folder structure in VS Code
 
-Add your screenshot here.
 
----
+![Task 1 Screenshot 1](screenshots/Assignment3.Task1.jpg)
+
 
 # Task 2 — Add the Skill Files
 
@@ -34,15 +34,15 @@ Place all required skill files into their correct directories and verify their c
 
 #### Screenshot 2 — scaffold-terraform skill folder contents
 
-Add your screenshot here.
 
----
+![Task 2 Screenshot 2](screenshots/Assignment3.Task2.ss2.jpg)
+
 
 #### Screenshot 3 — tf-plan/SKILL.md showing allowed-tools restrictions
 
-Add your screenshot here.
 
----
+![Task 2 Screenshot 3](screenshots/Assignment3.Task2.ss3.jpg)
+
 
 # Task 3 — Run /scaffold-terraform
 
@@ -54,15 +54,15 @@ Execute the `/scaffold-terraform` skill to generate a full Terraform infrastruct
 
 #### Screenshot 4 — Claude scaffold execution result
 
-Add your screenshot here.
+![Task 3 Screenshot 4](screenshots/Assignment3.Task3.ss4.jpg)
 
----
+
 
 #### Screenshot 5 — Generated terraform/ folder with all files
 
-Add your screenshot here.
+![Task 3 Screenshot 5](screenshots/Assignment3.Task3.ss5.jpg)
 
----
+
 
 # Task 4 — Run terraform init and /tf-plan
 
@@ -74,9 +74,9 @@ Initialize Terraform and execute the `/tf-plan` skill to observe plan execution 
 
 #### Screenshot 6 — /tf-plan execution and Claude analysis output
 
-Add your screenshot here.
 
----
+![Task 4 Screenshot 6](screenshots/Assignment3.Task4.ss6.jpg)
+
 
 # Submission Instructions
 
@@ -90,9 +90,9 @@ Add your screenshot here.
 
 Paste your forked repository URL here:
 
-`__________________________`
+https://github.com/Tonia-onyeka/Ultimate-Agentic-DevOps-with-Claude-Code.git
 
----
+
 
 # Completion Checklist
 
