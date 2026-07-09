@@ -108,7 +108,6 @@ Trigger the cost optimizer agent and review the generated cost optimization repo
 - Ensure all agent files are committed in `.claude/agents/`
 - Complete all written answers in your GitHub Repo
 - Push final changes to your forked GitHub repository
-<<<<<<< HEAD
 - Submit only the Google Doc link as required
 
 ---
@@ -118,8 +117,6 @@ Trigger the cost optimizer agent and review the generated cost optimization repo
 
 https://docs.google.com/document/d/1yVyn_aSggq4CtcpQ5IORv2silhnPrTTReLKQz52f3nk/edit?usp=sharing
 
-=======
->>>>>>> upstream/main
 
 
 ## GitHub Repository URL

@@ -46,7 +46,7 @@ You can publish your blog on:
 
 #### Screenshot 1 — Blog published and visible
 
-Add your screenshot here.
+![Task 1 Screenshot 1](screenshots/MediumPost.jpg)
 
 ---
 
@@ -54,7 +54,7 @@ Add your screenshot here.
 
 Blog Link:
 
-`__________________________________________`
+https://medium.com/@anthoniaakwuohia/reflection-week-2-086d9db66e10?sharedUserId=anthoniaakwuohia
 
 ---
 
@@ -92,23 +92,51 @@ P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by 
 
 #### Screenshot 2 — LinkedIn post published
 
-Add your screenshot here.
 
----
+![Task 2 Screenshot 2](screenshots/LinkedInPost.screenshot.jpg)
+
 
 ### Submission Field
 
 LinkedIn Post Content (copy-paste here):
 
 ```
-Paste your LinkedIn post content here
-```
+🚀 Building Safer AI-Powered DevOps Workflows with Claude Code
 
+This week in the DevOps Micro Internship with Agentic AI, I gained a deeper understanding of how Agentic AI can be integrated into real-world DevOps workflows, not just to automate tasks, but to do so safely, consistently, and with proper governance.
+
+Reflecting on one of my biggest learning moments was working with Claude Code Hooks and Permissions.
+
+The screenshot below demonstrates a UserPromptSubmit hook successfully blocking a destructive command:
+"Delete all files in the terraform folder"
+
+Instead of allowing a potentially harmful action, the hook detected the destructive intent and prevented execution, recommending a controlled alternative (/tf-destroy). This reinforced an important DevOps principle: automation should always include safeguards.
+
+🔑 Key Technical Takeaways
+🔹Configured Claude Code Hooks to intercept unsafe user prompts before execution. 
+🔹Learned how Permissions control AI tool access and reduce operational risks. 
+🔹Explored CLAUDE.md to guide AI behavior consistently across projects. 
+🔹Understood how Skills, Subagents, MCP (Model Context Protocol), and Memory work together to create structured, reusable, and context-aware AI workflows. 
+🔹Realized that AI is far more effective when paired with clearly defined rules, reusable workflows, and human oversight. 
+
+Beyond the technical concepts, I also learned an important lesson about myself: engineering isn't just about making automation work, it's about making it safe, reliable, and maintainable. Careful documentation, following instructions, and validating outputs are just as valuable as writing code.
+
+Every week of this internship continues to strengthen my foundation in DevOps while expanding my understanding of how Agentic AI can improve modern engineering workflows.
+
+Claude Code Hook blocking a destructive operation before execution, an excellent example of secure automation in practice. Another Week, Another DevOps Milestone.
+
+P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by Pravin Mishra. You can start your DevOps journey by joining this Discord community (https://lnkd.in/e3_PbHNQ).
+#DMIByPravinMishra #AgenticAI #ClaudeCode #DevOps #LearningInPublic #Automation #Terraform #CloudComputing #AIEngineering #OpenToWork
+
+
+
+```
+![Task 2 Screenshot 2](screenshots/Assignment6.Task6.jpg)
 ---
 
 ### LinkedIn Post Link:
 
-`__________________________________________`
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_dmibypravinmishra-agenticai-claudecode-share-7481086011326885888-81XH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 

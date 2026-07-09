@@ -93,15 +93,13 @@ Paste your forked repository URL here:
 https://github.com/Tonia-onyeka/Ultimate-Agentic-DevOps-with-Claude-Code.git
 
 
-<<<<<<< HEAD
-=======
 ## LinkedIn post URL
 
 Paste your forked repository URL here:
 
-`__________________________`
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_dmibypravinmishra-agenticai-claudecode-share-7481083198597234690-Vgm9/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
+
 ---
->>>>>>> upstream/main
 
 # Completion Checklist
 
