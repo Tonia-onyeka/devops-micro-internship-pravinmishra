@@ -92,7 +92,7 @@ Run three tests that prove Claude remembers what you told it — without you say
 
 Paste your Linkedin post link here:
 
-`__________________________`
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_my-ai-agent-just-remembered-a-project-decision-activity-7482650737164832768-umXz?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 
