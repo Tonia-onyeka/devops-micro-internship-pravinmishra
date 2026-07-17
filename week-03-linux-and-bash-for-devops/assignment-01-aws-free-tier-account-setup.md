@@ -64,6 +64,7 @@ Confirm that your AWS account setup is complete by navigating to the Account sec
 ![Task 3 Screenshot 1](screenshots/Assignment1.Taks3.ss1.png)
 
 
+
 ---
 
 # Submission Instructions

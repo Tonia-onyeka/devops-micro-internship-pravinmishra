@@ -49,7 +49,7 @@ This is not a course. It is an internship-style program — real deployments, re
 
 <!-- Add your cohort leaderboard rank here as you progress -->
 
-> 🥇 Cohort 3 Rank: **#22** <!-- Update this each week -->
+> 🥇 Cohort 3 Rank: **#1** <!-- Update this each week -->
 
 ---
 
@@ -130,7 +130,7 @@ Week 03 → Linux & Bash for DevOps
 
 | Week | Topic | Status | Assignment | LinkedIn Post | Blog Post |
 |------|-------|--------|------------|---------------|-----------|
-| 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | — | — |
+| 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_pravin-mishra-the-cloudadvisory-linkedin-activity-7460407568872534017-m9bj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/starting-devops-journey-learning-the-fundamentals-of-networking-dns-and-development-tools-a6a44e4b7de6?sharedUserId=anthoniaakwuohia |
 | 01 | Success Mindset | ✅ Completed | ✅ Solved | [LinkedIn Post](https://www.linkedin.com/in/anthonia-akwuohia-5b00681b0/) | [Blog Post](https://medium.com/@anthoniaakwuohia/how-to-break-into-tech-without-losing-yourself-0a96eb6f9781/) |
 | 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | [LinkedIn Post](https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_dmibypravinmishra-agenticai-claudecode-share-7481086011326885888-81XH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q) | [Blog Post](https://medium.com/@anthoniaakwuohia/reflection-week-2-086d9db66e10?sharedUserId=anthoniaakwuohia) |
 | 03 | Linux for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-ec2-share-7483691848595582976-MXkH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/configuring-and-resolving-server-failures-practical-linux-automation-lessons-901f00ca8981?sharedUserId=anthoniaakwuohia |
