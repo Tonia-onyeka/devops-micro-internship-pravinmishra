@@ -20,25 +20,25 @@ Verify that the deployed React application is reachable from the browser and con
 
 #### Screenshot 1 — Browser showing the React app with your Full Name visible on the UI
 
-Add your screenshot here.
+![Task 1 Screenshot 1](screenshots/Assignment3.Task1.ss1.png)
 
 ---
 
 #### Screenshot 2 — Output of `ip a`
 
-Add your screenshot here.
+![Task 1 Screenshot 2](screenshots/Assignment3.Task1.ss2.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo ss -tulpen`
 
-Add your screenshot here.
+![Task 1 Screenshot 3](screenshots/Assignment3.Task1.ss3.png)
 
 ---
 
 #### Screenshot 4 — Output of `sudo ufw status`
 
-Add your screenshot here.
+![Task 1 Screenshot 4](screenshots/Assignment3.Task1.ss4.png)
 
 ---
 
@@ -60,7 +60,9 @@ The command output also displays 0.0.0.0:22 with the process name sshd. This ind
 
 **3. Did you find any unexpected open ports? Explain briefly.**
 
+
 No unexpected ports were found. The only services exposed to external users are Nginx on port 80 and SSH on port 22, which are required for hosting the web server and allowing remote access. Other services, such as Chrony and systemd-resolved, are bound to the local loopback address (127.0.0.1), meaning they can only be accessed from within the server and are not exposed to the internet. This confirms that the server is securely configured with only the necessary ports open.
+
 ---
 
 # Task 2 — Service Health & Systemd Validation (Nginx)
@@ -73,19 +75,19 @@ Verify that Nginx is properly installed, running, enabled at boot, and safely co
 
 #### Screenshot 1 — Output of `systemctl status nginx --no-pager`
 
-Add your screenshot here.
+![Task 2 Screenshot 1](screenshots/Assignment3.Task2.ss1.png)
 
 ---
 
 #### Screenshot 2 — Output of `sudo nginx -t`
 
-Add your screenshot here.
+![Task 2 Screenshot 2](screenshots/Assignment3.Task2.ss2.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo ss -lptn '( sport = :80 )'`
 
-Add your screenshot here.
+![Task 2 Screenshot 3](screenshots/Assignment3.Task2.ss3.png)
 
 ---
 
@@ -115,19 +117,21 @@ Verify real traffic flow and analyze logs to understand system behavior and erro
 
 #### Screenshot 1 — Output of `sudo tail -n 30 /var/log/nginx/access.log`
 
-Add your screenshot here.
+![Task 3 Screenshot 1](screenshots/Assignment3.Task3.ss1.png)
+![Task 3 Screenshot 1](screenshots/Assignment3.Task3.ss1i.png)
+![Task 3 Screenshot 1](screenshots/Assignment3.Task3.ss1ii.png)
 
 ---
 
 #### Screenshot 2 — Output of `sudo tail -n 30 /var/log/nginx/error.log`
 
-Add your screenshot here.
+![Task 3 Screenshot 2](screenshots/Assignment3.Task3.ss2.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo journalctl -u nginx --no-pager -n 50`
 
-Add your screenshot here.
+![Task 3 Screenshot 3](screenshots/Assignment3.Task3.ss3.png)
 
 ---
 
@@ -175,25 +179,25 @@ Assess server capacity and detect potential performance or failure risks.
 
 #### Screenshot 1 — Output of `uptime`
 
-Add your screenshot here.
+![Task 4 Screenshot 1](screenshots/Assignment3.Task4.ss1.png)
 
 ---
 
 #### Screenshot 2 — Output of `free -h`
 
-Add your screenshot here.
+![Task 4 Screenshot 2](screenshots/Assignment3.Task4.ss2.png)
 
 ---
 
 #### Screenshot 3 — Output of `df -h`
 
-Add your screenshot here.
+![Task 4 Screenshot 3](screenshots/Assignment3.Task4.ss3.png)
 
 ---
 
 #### Screenshot 4 — Output of `sudo du -sh /var/* | sort -h`
 
-Add your screenshot here.
+![Task 4 Screenshot 4](screenshots/Assignment3.Task4.ss4.png)
 
 ---
 
@@ -223,19 +227,20 @@ Ensure the correct React build is deployed and Nginx is serving it properly.
 
 #### Screenshot 1 — Output of `ls -lah /var/www/html | head -n 20`
 
-Add your screenshot here.
+![Task 5 Screenshot 1](screenshots/Assignment3.Task5.ss1.png)
 
 ---
 
 #### Screenshot 2 — Output of `grep -R "Deployed by" -n /var/www/html 2>/dev/null | head`
 
-Add your screenshot here.
+![Task 5 Screenshot 2](screenshots/Assignment3.Task5.ss2.png)
+![Task 5 Screenshot 2](screenshots/Assignment3.Task5.ss2i.png)
 
 ---
 
 #### Screenshot 3 — Output of `grep -n "try_files" /etc/nginx/sites-available/default`
 
-Add your screenshot here.
+![Task 5 Screenshot 3](screenshots/Assignment3.Task5.ss3.png)
 
 ---
 
@@ -259,19 +264,19 @@ Simulate a real-world Nginx misconfiguration and recover the service safely.
 
 #### Screenshot 1 — Output of `sudo nginx -t` showing the syntax error (broken config)
 
-Add your screenshot here.
+![Task 6 Screenshot 1](screenshots/Assignment3.Task6.ss1.png)
 
 ---
 
 #### Screenshot 2 — Output of `sudo nginx -t` showing syntax ok (fixed config)
 
-Add your screenshot here.
+![Task 6 Screenshot 2](screenshots/Assignment3.Task6.ss2.png)
 
 ---
 
 #### Screenshot 3 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
+![Screenshot 3](screenshots/Assignment3.Task6.ss3.png)
 
 ---
 
@@ -307,13 +312,13 @@ Simulate missing deployment content and recover the application safely.
 
 #### Screenshot 1 — Output of `curl -I http://<public-ip>` showing failure (non-200 response)
 
-Add your screenshot here.
+![Screenshot 1](screenshots/Assignment3.Task.7.ss1.png)
 
 ---
 
 #### Screenshot 2 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
+![Screenshot 2](screenshots/Assignment3.Task7.ss2.png)
 
 ---
 
@@ -387,13 +392,13 @@ Stopping or terminating unused cloud resources helps reduce unnecessary costs, i
 
 Paste your LinkedIn post URL here:
 
-`__________________________`
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-linux-ubuntu-share-7483696455786868737-4dj8/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+![Screenshot](screenshots/LinkedInPostAss3.png)
 
 ---
 
