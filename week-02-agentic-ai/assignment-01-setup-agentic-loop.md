@@ -80,7 +80,7 @@ Paste your forked repository URL here:
 
 https://github.com/Tonia-onyeka/Ultimate-Agentic-DevOps-with-Claude-Code.git
 
-
+---
 
 
 # Completion Checklist

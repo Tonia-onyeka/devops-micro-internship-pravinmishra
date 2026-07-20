@@ -99,8 +99,7 @@ Verify MCP functionality by retrieving real-time data from your GitHub account u
 
 https://github.com/Tonia-onyeka/Ultimate-Agentic-DevOps-with-Claude-Code.git
 
-
-
+---
 
 ## Security Confirmation
 
