@@ -79,8 +79,8 @@ Week 02 → Agentic AI with Claude Code
 Week 03 → Linux & Bash for DevOps
 [![Week 03 – Linux & Bash](./badges/week-03.svg)](./week-03-linux-and-bash-for-devops/)
 
-<!-- Week 04 → Git & GitHub -->
-<!-- [![Week 04 – Git](./badges/week-04.svg)](./week-04-github/) -->
+Week 04 → Git & GitHub
+[![Week 04 – Git](./badges/week-04.svg)](./week-04-github/)
 
 <!-- Week 05 → DevOps Lifecycle & Agile -->
 <!-- [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/) -->
@@ -133,18 +133,17 @@ Week 03 → Linux & Bash for DevOps
 | 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_pravin-mishra-the-cloudadvisory-linkedin-activity-7460407568872534017-m9bj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/starting-devops-journey-learning-the-fundamentals-of-networking-dns-and-development-tools-a6a44e4b7de6?sharedUserId=anthoniaakwuohia |
 | 01 | Success Mindset | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_building-reliable-cloud-solutions-through-share-7478430251426156544-Zsdf/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | [Blog Post](https://medium.com/@anthoniaakwuohia/how-to-break-into-tech-without-losing-yourself-0a96eb6f9781/) |
 | 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | [LinkedIn Post](https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_dmibypravinmishra-agenticai-claudecode-share-7481086011326885888-81XH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q) | [Blog Post](https://medium.com/@anthoniaakwuohia/reflection-week-2-086d9db66e10?sharedUserId=anthoniaakwuohia) |
-| 03 | Linux for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-ec2-share-7483691848595582976-MXkH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/configuring-and-resolving-server-failures-practical-linux-automation-lessons-901f00ca8981?sharedUserId=anthoniaakwuohia |
-| 04 | Bash Scripting | ⬜ Not Started | ⏳ Pending | — | — |
-| 05 | Git & GitHub | ⬜ Not Started | ⏳ Pending | — | — |
-| 06 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
-| 07 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
-| 08 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
-| 09 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
-| 10 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
-| 11 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
-| 12 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
-| 13 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
-| 14 | Final Project | ⬜ Not Started | ⏳ Pending | — | — |
+| 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-ec2-share-7483691848595582976-MXkH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/configuring-and-resolving-server-failures-practical-linux-automation-lessons-901f00ca8981?sharedUserId=anthoniaakwuohia |
+| 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-ec2-share-7485632414107508736-yKXB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | — |
+| 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
+| 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
+| 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
+| 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
+| 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
+| 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
+| 11 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
+| 12 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
+| 13 | Final Project | ⬜ Not Started | ⏳ Pending | — | — |
 
 **Status:** ⬜ Not Started &nbsp;|&nbsp; 🔄 In Progress &nbsp;|&nbsp; ✅ Completed<br>
 **Assignment:** ⏳ Pending &nbsp;|&nbsp; ✅ Solved
