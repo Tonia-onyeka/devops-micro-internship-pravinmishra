@@ -129,7 +129,7 @@ Replace the existing homepage tagline with the required DMI Website call-to-acti
 
 #### Screenshot 14 — EC2 browser view showing "Start your DevOps Journey here" and the clickable "Visit the DMI Website" link
 
-![Screenshot](screenshots/Assignment3.Task5.ss14.png)
+![Screenshot](screenshots/Assignment3.Task5.ss14.jpg)
 
 ---
 

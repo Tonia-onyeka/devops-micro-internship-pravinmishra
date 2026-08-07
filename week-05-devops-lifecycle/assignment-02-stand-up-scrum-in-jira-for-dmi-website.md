@@ -88,8 +88,9 @@ Apply the `frontend` label to S1, S2, S3, S5, and S6, and the `devops` label to 
 
 #### Screenshot 7 — Backlog or Story details showing labels applied to at least two visible Stories
 
-![Screenshot](screenshots/Assignment2.Task5.ss7.png
-![Screenshot](screenshots/Assignment2.Task5.ss7i.png))
+![Screenshot](screenshots/Assignment2.Task5.ss7.png)
+
+![Screenshot](screenshots/Assignment2.Task5.ss7i.png)
 
 ---
 
@@ -110,6 +111,7 @@ Create a one-week Sprint, move two or three Stories into it (approximately 3–5
 #### Screenshot 9 — Active Sprint board showing the started Sprint and Sprint Goal
 
 ![Screenshot](screenshots/Assignment2.Task6.ss9.png)
+
 ![Screenshot](screenshots/Assignment2.Task6.ss9i.png)
 
 ---
@@ -125,6 +127,7 @@ Filter Jira work by the `frontend` and `devops` labels and review Stories with S
 #### Screenshot 10 — Filter for label = frontend showing the filtered results
 
 ![Screenshot](screenshots/Assignment2.Task7.ss10.png)
+
 ![Screenshot](screenshots/Assignment2.Task7.ss10i.png)
 
 ---
