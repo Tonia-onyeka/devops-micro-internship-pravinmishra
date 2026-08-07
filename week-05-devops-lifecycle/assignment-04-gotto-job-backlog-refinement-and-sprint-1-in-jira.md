@@ -20,7 +20,7 @@ Choose Team Mode or Solo Mode, and document how each Scrum role (Product Owner, 
 
 #### Screenshot 1 — Jira "Create project" screen, or the project sidebar after creation
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task1.ss1.png)
 
 ---
 
@@ -28,7 +28,13 @@ Add your screenshot here.
 
 Write one line for each role: PO (what you prioritized), SM (how you ensured process), Dev Lead (what you built), DevOps Lead (how you shipped).
 
-Write your answer here.
+1) PO (Solo Mode): Prioritized the highest-value UI improvement from the backlog to improve the user experience of the Gotto Job template.
+
+2) SM (Solo Mode): Ensured the Scrum process was followed by tracking progress, updating task status, and completing Sprint planning and retrospective activities.
+
+3) Dev Lead (Solo Mode): Implemented the selected UI enhancement and verified that the feature worked correctly in the application.
+
+4) DevOps Lead (Solo Mode): Committed the changes, deployed them to the EC2 environment, and confirmed that the update was live successfully.
 
 ---
 
@@ -42,7 +48,7 @@ Create a Team-managed Scrum project named `Gotto Job – Team <#>` (Team Mode) o
 
 #### Screenshot 2 — Project created page showing the project name and key
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task2.ss2.png)
 
 ---
 
@@ -56,7 +62,7 @@ Create the Epic `Improve Gotto Job UI discoverability & trust` to group the UI i
 
 #### Screenshot 3 — Backlog showing the Epic panel with the Epic visible
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task3.ss3.png)
 
 ---
 
@@ -70,13 +76,13 @@ Create at least six Stories under the Epic, estimate each with 1, 2, or 3 story 
 
 #### Screenshot 4 — Backlog showing the Epic and at least six Stories under it
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task4.ss4.png)
 
 ---
 
 #### Screenshot 5 — One Story opened showing its Story Points and acceptance criteria filled in
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task4.ss5.png)
 
 ---
 
@@ -90,7 +96,7 @@ Confirm the Story Points (1, 2, or 3) for each Story and record brief reasoning 
 
 #### Screenshot 6 — Backlog showing Story Points visible, or two or three Stories opened showing their points
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task5.ss6.png)
 
 ---
 
@@ -98,7 +104,21 @@ Add your screenshot here.
 
 For each story, explain in one or two lines why it is a 1, 2, or 3 (mention any debate, even in Solo Mode).
 
-Write your answer here.
+1) S1 – Hero tagline (1 point): Estimated as 1 point because it is a simple content update involving only a single heading change with minimal effort.
+
+2) S2 – Button colour (1 point): Estimated as 1 point since it is primarily a CSS styling update. I briefly considered 2 points because the change may affect multiple buttons, but the implementation remains straightforward.
+
+3) S3 – Job card typography (2 points): Estimated as 2 points because it requires adjusting font size, weight, and spacing, followed by checking that the layout remains visually consistent on different screen sizes.
+
+4) S4 – REMOTE badge (2 points): Estimated as 2 points because it involves introducing a new UI element and ensuring it appears correctly for remote job listings.
+
+5) S5 – Posted on date (1 point): Estimated as 1 point since it is a simple text/date addition with no additional functionality or logic.
+
+6) S6 – Search labels (2 points): Estimated as 2 points because multiple labels and placeholders must be updated and tested for consistency across the search interface.
+
+7) S7 – Job Detail “Apply Now” Button (1 point): Estimated as 1 point because it only adds a single call-to-action button linked to an email address or placeholder URL, with no extra behavior required.
+
+8) S8 – Footer Trust Links (1 point): Estimated as 1 point because it involves a small HTML update to add the About and Contact links without any complex functionality.
 
 ---
 
@@ -112,13 +132,13 @@ Create Sprint 1, move three or four Stories into it (approximately 3–6 points)
 
 #### Screenshot 7 — Sprint 1 with the selected Stories inside it
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task6.ss7.png)
 
 ---
 
 #### Screenshot 8 — One Story showing the Sub-tasks created
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task6.ss8.png)
 
 ---
 
@@ -132,7 +152,7 @@ Open the Burndown Chart and confirm it exists for Sprint 1. It is acceptable if 
 
 #### Screenshot 9 — Burndown Chart page opened, even if empty
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task7.ss9.png)
 
 ---
 
@@ -146,19 +166,19 @@ Implement one small UI-only Story from Sprint 1, commit it, deploy it live, and 
 
 #### Screenshot 10 — Jira board showing the Story moved to Done
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task8.ss10.png)
 
 ---
 
 #### Screenshot 11 — Git commit output
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task8.ss11.png)
 
 ---
 
 #### Screenshot 12 — Live URL in the browser showing the UI change, with the URL visible
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task8.ss12.png)
 
 ---
 
@@ -172,7 +192,7 @@ Add a retro comment covering what went well, what to improve, one Scrum pillar o
 
 #### Screenshot 13 — Jira retro comment visible
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment4.Task9.ss13.png)
 
 ---
 
@@ -188,13 +208,13 @@ Publish a LinkedIn post about what you delivered, including your live URL, three
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-jira-scrum-share-7491346559641546752-evJ-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 
 #### Screenshot 14 — Published LinkedIn post
 
-Add your screenshot here.
+![Screenshot](screenshots/linkedinAss4.png)
 
 ---
 
