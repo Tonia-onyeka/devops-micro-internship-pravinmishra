@@ -20,7 +20,8 @@ Download or clone the portfolio website template from GitHub and confirm `index.
 
 #### Screenshot 1 — File Explorer or terminal showing the template folder contents with `index.html` visible
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment2.Task1.ss1.png)
+
 
 ---
 
@@ -34,7 +35,8 @@ Create a globally unique S3 bucket in your chosen AWS region.
 
 #### Screenshot 2 — S3 bucket created screen showing the bucket name and region
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment2.Task2.ss2.png)
+
 
 ---
 
@@ -48,7 +50,7 @@ Upload the contents of the template folder (not the folder itself) so `index.htm
 
 #### Screenshot 3 — S3 bucket Objects view showing `index.html` at the top or root level
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment2.Task3.ss3.png)
 
 ---
 
@@ -62,7 +64,7 @@ Enable S3 Static Website Hosting with `index.html` as the index document and `er
 
 #### Screenshot 4 — Static website hosting enabled screen showing the Website endpoint
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment2.Task.ss4.png)
 
 ---
 
@@ -76,7 +78,7 @@ Adjust Block Public Access settings and save a bucket policy that grants public 
 
 #### Screenshot 5 — Bucket policy page showing the policy saved successfully, with the bucket name visible
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment2.Task5.ss5.png)
 
 ---
 
@@ -90,7 +92,8 @@ Load the site through the S3 website endpoint and confirm the homepage, images, 
 
 #### Screenshot 6 — Browser showing the live website with the S3 website endpoint visible in the address bar
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment2.Task6.ss6.jpg)
+
 
 ---
 
@@ -104,7 +107,11 @@ Edit a small visible detail, re-upload it to S3, and confirm the change appears 
 
 #### Screenshot 7 (optional) — Before and after views, or a browser view showing the updated text
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment2.Task6.ss6.jpg)
+
+![Screenshot](screenshots/Assignment2.Task7.ss7.jpg)
+
+
 
 ---
 
