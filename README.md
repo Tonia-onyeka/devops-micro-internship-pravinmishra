@@ -85,8 +85,8 @@ Week 04 → Git & GitHub
 Week 05 → DevOps Lifecycle & Agile
 [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/)
 
-<!-- Week 06 → AWS Cloud -->
-<!-- [![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/) -->
+Week 06 → AWS Cloud
+[![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/)
 
 <!-- Week 07 → Azure Cloud -->
 <!-- [![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/) -->
@@ -136,7 +136,7 @@ Week 05 → DevOps Lifecycle & Agile
 | 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-ec2-share-7483691848595582976-MXkH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/configuring-and-resolving-server-failures-practical-linux-automation-lessons-6c741fbd5cba?sharedUserId=anthoniaakwuohia |
 | 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-ec2-share-7485632414107508736-yKXB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/building-safer-devops-workflows-with-git-hooks-ai-pull-request-automation-0e849b007d57?sharedUserId=anthoniaakwuohia |
 | 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-jira-agile-share-7491142024935395328-m0Nz/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/from-backlog-to-burndown-building-a-real-scrum-workflow-in-jira-for-a-devops-website-project-ed4ab16a0edf?sharedUserId=anthoniaakwuohia |
-| 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
+| 06 | AWS Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_aws-devops-cloudcomputing-activity-7494198511140343809-MmFS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/building-and-testing-a-highly-available-two-tier-web-architecture-on-aws-ec9488820fa0?sharedUserId=anthoniaakwuohia |
 | 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
 | 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
