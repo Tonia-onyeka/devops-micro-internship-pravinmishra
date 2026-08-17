@@ -163,14 +163,15 @@ Confirm the application communicates with the RDS database through the ALB DNS n
 
 #### Screenshot 17 — Browser showing the application loaded through the ALB DNS name with the URL visible
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task7.ss17.png)
 
 ---
 
 #### Screenshot 18 — Proof of a database write through a UI message or database query output
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task7.ss18.png)
 
+![Screenshot](screenshots/Assignment5.Task7.ss18i.png)
 ---
 
 # Task 8 — High Availability Tests (Must Do Both)
@@ -185,25 +186,25 @@ Test B: simulate an Availability Zone impact (stop, detach, or reduce desired ca
 
 #### Screenshot 19 — EC2 showing the terminated instance and the newly launched instance; timestamps are helpful
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task8.19.png)
 
 ---
 
 #### Screenshot 20 — Target group showing healthy targets after replacement
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task8.ss20.png)
 
 ---
 
 #### Screenshot 21 — Evidence that an instance was removed, detached, placed in Standby, or stopped in one Availability Zone
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task8.ss21.png)
 
 ---
 
 #### Screenshot 22 — Browser showing that the ALB DNS endpoint still works during the change
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task8.22.png)
 
 ---
 
@@ -217,7 +218,7 @@ Summarize the VPC/subnet layout, the ALB and Auto Scaling Group setup, the priva
 
 #### Screenshot 23 — A simple architecture diagram, which may be hand-drawn, or an AWS console overview showing the components
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task9.ss23.jpg)
 
 ---
 

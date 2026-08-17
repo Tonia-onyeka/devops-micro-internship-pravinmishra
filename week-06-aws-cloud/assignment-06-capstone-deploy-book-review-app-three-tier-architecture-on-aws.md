@@ -20,7 +20,7 @@ Create an architecture diagram showing the custom VPC (10.0.0.0/16), the six sub
 
 #### Diagram image or link
 
-Add your diagram image or link here.
+![Screenshot](screenshots/Assignment6.Task.ss1.jpg)
 
 ---
 
@@ -34,14 +34,83 @@ Record the AWS Region used and list every AWS service used across networking, co
 
 **Region:**
 
-Write your answer here.
+Deployment Region: eu-north-1 (Stockholm) 
 
 ---
 
 **Services:**
 
-Write your answer here.
+Networking & Content Delivery:
+1) Amazon VPC (Virtual Private Cloud): Network boundary configured with he custom VPC uses:
 
+VPC CIDR: 10.0.0.0/16
+The VPC is divided into six subnets across two Availability Zones
+
+2) Subnets: 6 total subnets across 2 Availability Zones (2 Public Web, 2 Private App, 2 Private DB).
+
+3) Internet Gateway (IGW): Provides public internet ingress/egress for public subnets.
+The Internet Gateway connects the VPC to the Internet.
+The public route table contains a route similar to:
+
+0.0.0.0/0 → Internet Gateway
+
+This allows resources in appropriately configured public subnets to communicate with the Internet.
+
+In this architecture, the public Web Tier and public ALB use the public networking path.
+
+4) NAT Gateway: Enables secure outbound internet access for private App EC2 instances.
+Purpose: Allows resources in private subnets to make outbound Internet connections without making those resources publicly accessible.
+
+5) Route Tables: Public, App Private, and DB Private route tables to manage network path flow.
+
+Compute:
+
+Amazon EC2
+Purpose: Provides the virtual servers that run the application components.
+
+Amazon EC2 instances are used for the application workloads.
+
+In this architecture:
+
+Web Tier EC2 instances run Nginx.
+App Tier EC2 instances run the application runtime, such as Node.js.
+EC2 instances are distributed across two Availability Zones.
+The Web Tier instances receive traffic from the public ALB.
+App Tier instances receive traffic through the internal ALB.
+
+Using EC2 allows the application to run on configurable virtual servers while providing control over the operating system, software, networking, and security configuration.
+
+Load Balancing:
+Purpose: Receives traffic from users and distributes it across the Web Tier EC2 instances.
+
+The public Application Load Balancer is internet-facing and is deployed across the two public subnets.
+
+Public ALB: Sits in the public subnets (Book-Review-Public-A & B) listening on port 80. It serves as the single internet entry point, routing client HTTP web requests across the frontend Nginx Web instances. 
+Internal ALB: Sits in private subnets between the Web and App tiers. It accepts proxy requests from Nginx and balances backend API traffic across the Node.js App instances on port 8080, keeping the backend hidden from the public internet.  
+
+Security & Access Control:
+AWS Security Groups (SG): Act as stateful virtual firewalls enforcing strict tier-to-tier access:
+
+Public ALB SG: Allows inbound HTTP (80) from the internet (0.0.0.0/0).
+Web Tier SG: Allows inbound HTTP (80) only from the Public ALB SG.
+App Tier SG: Allows inbound custom TCP (8080) only from the Internal ALB SG.
+RDS DB SG: Allows inbound MySQL (3306) only from the App Tier SG.
+
+Database (Amazon RDS for MySQL):
+
+Purpose: Provides the managed relational database for the Book Review App.
+Amazon RDS is used to host the application's MySQL database.
+
+The database is placed in the private Database Tier rather than being directly exposed to the Internet.
+
+The database uses:
+
+Database, Port: 3306
+
+The App Tier communicates with RDS through MySQL port 3306.
+Multi-AZ Primary Database: Deployed in private DB subnets across two AZs. It provides synchronous failover protection for the main book_review_db database.
+
+RDS DB Subnet Group: Groups Book-Review-DB-Private-A and B into an isolated network boundary with no internet gateways or external routes, ensuring data is accessible only by the application tier inside the VPC.
 ---
 
 # Task 3 — Public Entry Point
@@ -56,7 +125,7 @@ Confirm the Book Review App loads through the public ALB DNS name.
 
 Paste your public ALB DNS name here:
 
-`Add your URL here`
+http://book-review-web-alb-1366937557.eu-north-1.elb.amazonaws.com/
 
 ---
 
@@ -70,37 +139,41 @@ Capture visual proof of every tier and load balancer.
 
 #### Web EC2
 
-Add your screenshot here.
+![Screenshot](screenshots//Assignment6.Task4.web.png
 
 ---
 
 #### App EC2
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task4.App.png)
 
 ---
 
 #### Public ALB
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task4.PublicALB.png)
+
 
 ---
 
 #### Internal ALB
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task4.PrivateALB.png)
+
 
 ---
 
 #### RDS + Replica
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task4.RDS.png)
+
 
 ---
 
 #### App UI proof
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task4.UIALB.png)
+
 
 ---
 
@@ -114,20 +187,25 @@ Summarize what worked in the final deployment, the issues encountered and how ea
 
 **What worked:**
 
-Write your answer here.
+The Book Review App was deployed using a three-tier AWS architecture. The Web Tier was placed in public subnets and configured with Next.js and Nginx behind a public Application Load Balancer. The App Tier was isolated in private subnets and accessed through an internal Application Load Balancer. Amazon RDS for MySQL was used as the private database layer. The deployment was tested by checking EC2 instances, load balancer target health, Nginx configuration, application connectivity, and database communication.
 
 ---
 
 **Issues + fixes:**
 
-Write your answer here.
+Several issues were encountered during the deployment and troubleshooting process. SSH connectivity to the Web EC2 initially timed out, so the Security Group, subnet route table, Internet Gateway, Network ACL, public IP address, and EC2 status checks were reviewed. The network configuration was confirmed to allow the required traffic.
+
+Nginx configuration also required troubleshooting. The Web Tier Nginx configuration was updated to serve the Next.js frontend on port 3000 and forward /api/ requests to the internal Application Load Balancer. The default Nginx site was disabled, the Book Review configuration was enabled, and nginx -t was used to validate the configuration before restarting the service.
+
+Database connectivity and application configuration were also reviewed. The backend environment variables were checked to ensure that the application used the correct RDS endpoint, database name, database user, and credentials. The internal ALB was used to keep App Tier communication private.
+
+During testing, a 503 Service Temporarily Unavailable response was encountered through the public ALB. The issue was investigated by checking ALB target health, Nginx status, Nginx configuration, port 80/3000 listeners, and the Next.js application. These troubleshooting steps helped identify where communication between the different tiers needed to be corrected.
 
 ---
 
 **Tools/sources used:**
 
-Write your answer here.
-
+The deployment and troubleshooting were performed using the AWS Management Console, EC2, VPC, Application Load Balancers, Auto Scaling Groups, Amazon RDS, Security Groups, Network ACLs, Internet Gateway, Ubuntu Linux, Nginx, Node.js, Next.js, MySQL, Git/GitHub, SSH, PM2, and standard Linux networking and service-management commands. AWS documentation and technical references were also used to understand AWS networking, load balancing, security, and database configuration.
 ---
 
 # LinkedIn Post (Required)
@@ -142,13 +220,14 @@ Publish a LinkedIn post sharing the capstone deployment, including the public AL
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-cloudcomputing-activity-7495160397298081793-hUOs?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 
 #### Screenshot of LinkedIn post
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Linkedinpost.png)
+
 
 ---
 
