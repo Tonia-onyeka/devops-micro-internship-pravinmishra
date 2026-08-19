@@ -273,13 +273,13 @@ Pick one real finding from your baseline report (or deliberately open a security
 
 #### Screenshot 12 — Output of the `revoke-security-group-ingress` and `authorize-security-group-ingress` commands you ran yourself
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task7.ss12.png)
 
 ---
 
 #### Screenshot 13 — Rerun of `./scripts/aws-audit.sh` showing the finding is now PASS
 
-
+![Screenshot](screenshots/Assignment7Task7.ss13.png)
 
 ---
 
@@ -287,7 +287,7 @@ Add your screenshot here.
 
 **1. Which exact finding did you fix, and what command did you run?**
 
-I fixed the SSH security-group exposure finding. I first created a temporary SSH ingress rule allowing port 22 from 0.0.0.0/0 to demonstrate the security risk. I then revoked that rule using aws ec2 revoke-security-group-ingress and authorized SSH access again using aws ec2 authorize-security-group-ingress, restricted to my own public IP address with /32. After the change, I reran the audit and the SSH check returned PASS.
+I identified and remediated the S3 Public Access Block finding. The initial audit showed that BlockPublicAcls, IgnorePublicAcls, BlockPublicPolicy, and RestrictPublicBuckets were all set to false. I verified the configuration using aws s3api get-public-access-block and then enabled all four S3 Block Public Access settings using aws s3api put-public-access-block. After the remediation, I reran the audit and the S3 security check returned PASS. The final audit reported 4 PASS, 1 WARN, and 0 FAIL.
 
 **2. Why did you scope the new rule to your own IP address instead of leaving it open to `0.0.0.0/0`?**
 
