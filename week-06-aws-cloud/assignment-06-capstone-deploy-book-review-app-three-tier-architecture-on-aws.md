@@ -172,7 +172,7 @@ Capture visual proof of every tier and load balancer.
 
 #### App UI proof
 
-![Screenshot](screenshots/Assignment6.Task4.UIALB.png)
+![Screenshot](screenshots/Assignment6.TaskALBUI.png)
 
 
 ---
