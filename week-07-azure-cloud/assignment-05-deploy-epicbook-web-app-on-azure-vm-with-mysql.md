@@ -20,7 +20,7 @@ Create a VNet (10.0.0.0/16) with a public subnet (10.0.1.0/24) for the VM and a 
 
 #### Screenshot 1 — Virtual Network overview showing the 10.0.0.0/16 address space and both subnets
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task1.ss1.png)
 
 ---
 
