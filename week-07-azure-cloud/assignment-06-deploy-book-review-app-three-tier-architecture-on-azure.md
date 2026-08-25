@@ -20,13 +20,98 @@ Create an architecture diagram and implementation plan identifying the presentat
 
 #### Screenshot 1 — Architecture diagram showing the public entry point, three tiers, network boundaries, and traffic flow
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task1.ss1.jpg)
 
 ---
 
 #### Screenshot 2 — Written architecture assumptions and selected Azure services
 
-Add your screenshot here.
+## Architecture Assumptions and Selected Azure Services
+
+### 1. Architecture Assumptions
+
+* The Book Review App consists of three logical tiers: Presentation/Web, Application/Business Logic, and Data/Database.
+* The Presentation Tier hosts the user-facing web application.
+* The Application Tier hosts the backend/API and business logic.
+* The Data Tier stores application data in a managed MySQL database.
+* The application will be deployed within a dedicated Azure Resource Group: `rg-bookreview-app`.
+* The Azure Virtual Network will use the address space `10.0.0.0/16`.
+* Each application tier will have a logically separated subnet.
+* The public entry point will be Azure Application Gateway with Web Application Firewall (WAF).
+* Only HTTPS traffic on port 443 is permitted from the Internet to the public entry point.
+* The Application Tier will not be directly accessible from the Internet.
+* The Database Tier will not be directly accessible from the Internet.
+* The Web Tier communicates with the Application Tier through private network traffic.
+* The Application Tier communicates with the MySQL database through private network traffic.
+* Network Security Groups (NSGs) will restrict traffic to only the required ports and sources.
+* Application secrets, database credentials, and connection strings will be stored securely in Azure Key Vault.
+* Azure Monitor and Log Analytics will be used for monitoring, metrics, logs, and alerts.
+* Database backup and recovery will use the backup capabilities of Azure Database for MySQL – Flexible Server.
+* Availability and recovery settings will be configured according to the application's required production availability and budget.
+* All resources should be deployed in the selected Azure region to reduce network latency where practical.
+
+### 2. Selected Azure Services
+
+| Component          | Selected Azure Service                     | Purpose        
+----------------------------------------------------------------------------------------------------------
+| Public Entry Point | Azure Application Gateway + WAF            | Secure HTTPS entry point and web application firewall      |
+| Presentation Tier  | Azure App Service                          | Hosts the frontend/web application                         |
+| Application Tier   | Azure App Service                          | Hosts backend/API and business logic                       |
+| Data Tier          | Azure Database for MySQL – Flexible Server | Managed MySQL database                                     |
+| Network            | Azure Virtual Network                      | Provides private network isolation                         |
+| Web Subnet         | `snet-web` — `10.0.1.0/24`                 | Presentation/web tier network boundary                     |
+| Application Subnet | `snet-app` — `10.0.2.0/24`                 | Application/API tier network boundary                      |
+| Database Subnet    | `snet-db` — `10.0.3.0/24`                  | Database network boundary                                  |
+| Network Security   | Network Security Groups                    | Restricts inbound and outbound network traffic             |
+| Secrets            | Azure Key Vault                            | Stores database credentials, keys, and application secrets |
+| Monitoring         | Azure Monitor                              | Monitoring, metrics, alerts, and service health            |
+| Logging            | Log Analytics Workspace                    | Centralized application and infrastructure logs            |
+| Security           | Microsoft Defender for Cloud               | Security posture monitoring and recommendations            |
+
+### 3. Approved Traffic Flow
+
+**Public traffic:**
+
+Users → Internet → Azure Application Gateway/WAF → Presentation Tier
+
+**Internal traffic:**
+
+Presentation Tier → Application Tier → Database Tier
+
+The Web Tier only accepts traffic from the approved Application Gateway path. The Application Tier accepts requests from the Web Tier, while the Database Tier accepts database connections only from the Application Tier.
+
+### 4. Security Boundaries
+
+* Internet-facing access is restricted to the Application Gateway/WAF.
+* HTTPS/TLS is used for public application traffic.
+* NSGs are applied to control network access.
+* The Application and Database tiers are protected from direct Internet access.
+* Database credentials are not stored directly in application source code.
+* Secrets are managed through Azure Key Vault.
+* Monitoring and logging are enabled for operational visibility.
+
+### 5. Availability, Backup and Recovery
+
+* Azure App Service can be configured with appropriate scaling and availability settings for production workloads.
+* Azure Database for MySQL – Flexible Server provides managed database capabilities and automated backup options.
+* Recovery procedures should be tested before production use.
+* Azure Monitor alerts should be configured for important application, infrastructure, and database conditions.
+* Logs should be retained in Log Analytics according to operational and compliance requirements.
+
+### 6. Implementation Order
+
+1. Create the Azure Resource Group.
+2. Create the Virtual Network and three subnets.
+3. Configure Network Security Groups and required rules.
+4. Deploy the Azure Database for MySQL – Flexible Server.
+5. Deploy the backend/API Application Service.
+6. Deploy the frontend/web Application Service.
+7. Configure secure application-to-database connectivity.
+8. Configure Azure Key Vault and application secrets.
+9. Deploy and configure Application Gateway/WAF as the public entry point.
+10. Configure Azure Monitor, Log Analytics, alerts, backup, and recovery settings.
+11. Test the complete traffic flow from the public entry point through all three tiers.
+
 
 ---
 
@@ -40,19 +125,20 @@ Create a dedicated Resource Group and VNet with separate subnets for the web, ap
 
 #### Screenshot 3 — Resource Group overview showing the assignment resources
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task2.ss3.png)
 
 ---
 
 #### Screenshot 4 — VNet overview showing the address space and all required subnets
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task2.ss4.png)
 
+![Screenshot](screenshots/Assignment6.Task2.ss4i.png)
 ---
 
 #### Screenshot 5 — Route-table or Private DNS evidence where applicable
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task2.ss5.png)
 
 ---
 
@@ -66,7 +152,7 @@ Apply least-privilege NSG rules so traffic flows Internet → public entry point
 
 #### Screenshot 6 — NSG rules proving least-privilege access between the tiers
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task3.ss6.png)
 
 ---
 

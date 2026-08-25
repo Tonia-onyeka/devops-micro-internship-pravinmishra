@@ -26,13 +26,14 @@ Create a VNet (10.0.0.0/16) with a public subnet (10.0.1.0/24) for the VM and a 
 
 #### Screenshot 2 — Public and private NSG inbound rules showing ports 80, 22, and restricted 3306 access
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task1.ss2.png)
 
 ---
 
 #### Screenshot 3 — Public IP and Network Interface association for the Virtual Machine
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task1.ss3.png)
+
 
 ---
 
@@ -46,13 +47,14 @@ Launch an Ubuntu 22.04 LTS VM (Standard B1s or equivalent) in the public subnet,
 
 #### Screenshot 4 — Virtual Machine overview showing Ubuntu, size, public IP, and subnet
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task2.ss4.png)
+
 
 ---
 
 #### Screenshot 5 — Terminal showing successful software installation or installed-version checks
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task2.ss5.png)
 
 ---
 
@@ -66,19 +68,19 @@ Clone the EpicBook repository, install dependencies, build the frontend, configu
 
 #### Screenshot 6 — Terminal showing the EpicBook repository cloned and dependencies installed
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task3.ss6.png)
 
 ---
 
 #### Screenshot 7 — Nginx configuration or service status proving the frontend is configured to be served
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task3.ss7.png)
 
 ---
 
 #### Screenshot 8 — Backend process or listening-port evidence (without exposing environment-variable secrets)
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task3.ss8.png)
 
 ---
 
@@ -92,19 +94,19 @@ Create a private Azure Database for MySQL Flexible Server (VNet Integration) in 
 
 #### Screenshot 9 — MySQL Flexible Server overview showing Private access (VNet Integration)
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task4.ss9.png)
 
 ---
 
 #### Screenshot 10 — Networking configuration showing the private subnet and restricted access
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task4.ss10.png)
 
 ---
 
 #### Screenshot 11 — MySQL Client output showing the EpicBook database or imported tables (no password visible)
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task4.ss11.png)
 
 ---
 
@@ -118,13 +120,13 @@ Confirm the EpicBook application loads through the VM's public IP and that viewi
 
 #### Screenshot 12 — Browser showing the EpicBook application with the Virtual Machine public IP visible
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task5.ss12.jpg)
 
 ---
 
 #### Screenshot 13 — Proof of a successful database-backed action (viewing products, adding to cart, or placing an order)
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment5.Task5.ss13.png)
 
 ---
 
@@ -132,7 +134,7 @@ Add your screenshot here.
 
 Paste the public IP URL of your Virtual Machine here:
 
-`Add your URL here`
+http://128.203.97.190/
 
 ---
 
