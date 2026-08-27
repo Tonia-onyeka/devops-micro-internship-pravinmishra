@@ -52,21 +52,31 @@ Create an architecture diagram and implementation plan identifying the presentat
 
 ### 2. Selected Azure Services
 
-| Component          | Selected Azure Service                     | Purpose        
-----------------------------------------------------------------------------------------------------------
-| Public Entry Point | Azure Application Gateway + WAF            | Secure HTTPS entry point and web application firewall      |
-| Presentation Tier  | Azure App Service                          | Hosts the frontend/web application                         |
-| Application Tier   | Azure App Service                          | Hosts backend/API and business logic                       |
-| Data Tier          | Azure Database for MySQL – Flexible Server | Managed MySQL database                                     |
-| Network            | Azure Virtual Network                      | Provides private network isolation                         |
-| Web Subnet         | `snet-web` — `10.0.1.0/24`                 | Presentation/web tier network boundary                     |
-| Application Subnet | `snet-app` — `10.0.2.0/24`                 | Application/API tier network boundary                      |
-| Database Subnet    | `snet-db` — `10.0.3.0/24`                  | Database network boundary                                  |
-| Network Security   | Network Security Groups                    | Restricts inbound and outbound network traffic             |
-| Secrets            | Azure Key Vault                            | Stores database credentials, keys, and application secrets |
-| Monitoring         | Azure Monitor                              | Monitoring, metrics, alerts, and service health            |
-| Logging            | Log Analytics Workspace                    | Centralized application and infrastructure logs            |
-| Security           | Microsoft Defender for Cloud               | Security posture monitoring and recommendations            |
+- Public Entry Point: Azure Application Gateway + WAF (Secure HTTPS entry point and web application firewall)
+
+- Presentation Tier: Azure App Service (Hosts the frontend/web application)
+
+- Application Tier: Azure App Service (Hosts backend/API and business logic)
+
+- Data Tier: Azure Database for MySQL – Flexible Server (Managed MySQL database)
+
+- Network: Azure Virtual Network (Provides private network isolation)
+
+- Web Subnet: snet-web — 10.0.1.0/24 (Presentation/web tier network boundary)
+
+- Application Subnet: snet-app — 10.0.2.0/24 (Application/API tier network boundary)
+
+- Database Subnet: snet-db — 10.0.3.0/24 (Database network boundary)
+
+- Network Security: Network Security Groups (Restricts inbound and outbound network traffic)
+
+- Secrets Management: Azure Key Vault (Stores database credentials, keys, and application secrets)
+
+- Monitoring: Azure Monitor (Monitoring, metrics, alerts, and service health)
+
+- Logging: Log Analytics Workspace (Centralized application and infrastructure logs)
+
+- Security Posture: Microsoft Defender for Cloud (Security posture monitoring and recommendations)
 
 ### 3. Approved Traffic Flow
 
@@ -133,7 +143,6 @@ Create a dedicated Resource Group and VNet with separate subnets for the web, ap
 
 ![Screenshot](screenshots/Assignment6.Task2.ss4.png)
 
-![Screenshot](screenshots/Assignment6.Task2.ss4i.png)
 ---
 
 #### Screenshot 5 — Route-table or Private DNS evidence where applicable
@@ -158,7 +167,7 @@ Apply least-privilege NSG rules so traffic flows Internet → public entry point
 
 #### Screenshot 7 — Key Vault or approved secret-management configuration (without displaying secret values)
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task3.ss7.png)
 
 ---
 
@@ -172,13 +181,13 @@ Deploy the Book Review App presentation layer on the approved web-tier compute s
 
 #### Screenshot 8 — Web-tier compute overview showing subnet and availability configuration
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task4.ss8.png)
 
 ---
 
 #### Screenshot 9 — Terminal or service output proving the presentation layer is running
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task4.ss9.png)
 
 ---
 
@@ -192,19 +201,19 @@ Deploy the Book Review App backend privately in the application subnet, configur
 
 #### Screenshot 10 — Application-tier compute overview showing private subnet placement
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task5.ss10.png)
 
 ---
 
 #### Screenshot 11 — Backend process, service, or listening-port evidence
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task5.ss11.png)
 
 ---
 
 #### Screenshot 12 — Internal health-check or API response (without exposing secrets)
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task5.ss12.png)
 
 ---
 
@@ -218,19 +227,20 @@ Create a private Azure managed database (public access disabled), with availabil
 
 #### Screenshot 13 — Database overview showing private connectivity and public access disabled
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task6.ss13.png)
 
 ---
 
 #### Screenshot 14 — Availability, backup, and retention configuration
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task6.ss14.png)
 
 ---
 
 #### Screenshot 15 — Successful schema or connectivity verification (without exposing credentials)
 
-Add your screenshot here.
+
+![Screenshot](screenshots/Assignment6.Task6.Task15.png)
 
 ---
 
@@ -244,19 +254,19 @@ Configure the approved public entry service with health probes and backend pools
 
 #### Screenshot 16 — Public entry service showing listener, frontend endpoint, and healthy web targets
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task7.ss16.png)
 
 ---
 
 #### Screenshot 17 — Internal application-tier load-balancing or routing configuration where applicable
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task7.ss17.png)
 
 ---
 
 #### Screenshot 18 — Azure Monitor, diagnostic settings, logs, metrics, or alert evidence
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task7.ss18.png)
 
 ---
 
@@ -270,25 +280,25 @@ Confirm the Book Review App works end to end through the public endpoint, with a
 
 #### Screenshot 19 — Browser showing the Book Review App through the public endpoint
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task8.ss19.png)
 
 ---
 
 #### Screenshot 20 — Proof of successful database-backed read and write operations
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task8.ss20.png)
 
 ---
 
 #### Screenshot 21 — Evidence that private tiers are not publicly accessible
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task8.ss21.png)
 
 ---
 
 #### Screenshot 22 — Availability-test and healthy-target evidence
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment6.Task8.ss22.png)
 
 ---
 
@@ -296,7 +306,7 @@ Add your screenshot here.
 
 Paste your public endpoint URL here:
 
-`Add your URL here`
+http://20.255.191.116/
 
 ---
 
@@ -304,7 +314,19 @@ Paste your public endpoint URL here:
 
 Summarize what worked, issues encountered and how they were fixed, and the availability/security/secrets/monitoring/backup choices made.
 
-Write your answer here.
+The Book Review App was successfully deployed using a production-style Azure three-tier architecture. The public endpoint was configured through the public load-balancing layer, and the application was successfully accessed through http://40.83.95.48/. The web interface loaded correctly and displayed books retrieved from the database.
+
+Several issues were encountered during deployment. The Internal Load Balancer initially could not be created because no frontend IP configuration had been successfully added. This was resolved by identifying the correct VNet and subnet configuration and using the Azure CLI where necessary. The application VM name also differed from the name in the original deployment instructions; the actual application VM was identified as bookreviewapp with private IP 10.0.2.4 in the snet-app subnet.
+
+Database authentication initially failed because the backend was using an incorrect database password. The password was corrected and verified independently using MySQL with SSL. The backend was then successfully connected to the Azure MySQL database. The application was also configured to listen on port 5000 so that it matched the Internal Load Balancer frontend, backend rule, and health probe configuration.
+
+The application and database tiers were kept private. The application VM uses the private application subnet and is not intended to be directly accessible from the Internet. The database is accessed by the application tier using the Azure MySQL endpoint with SSL enabled. Credentials and JWT secrets were kept in environment configuration rather than exposed in screenshots or application output.
+
+For availability, the Internal Load Balancer uses a TCP health probe on port 5000 to monitor the application backend. The public endpoint was tested repeatedly to confirm that the application remained accessible. Azure monitoring, health status, logs, and diagnostic information were reviewed as part of the deployment validation.
+
+For security, Network Security Groups were configured according to the three-tier model so that Internet traffic reaches the approved public entry point while application and database ports are not directly exposed to the Internet. Database communication uses encrypted SSL/TLS connections.
+
+Azure managed database backup and retention settings were selected to provide recovery capability for the database tier. Overall, the deployment successfully demonstrated public access to the web tier, private communication with the application and database tiers, database-backed application functionality, health monitoring, and separation of secrets from publicly visible configuration.
 
 ---
 

@@ -20,7 +20,7 @@ Confirm your Azure CLI is authenticated and can see the VM, network, storage acc
 
 #### Screenshot 1 — `az account show` and `az vm list -d -o table` confirming your subscription and running VM (subscription ID partially blurred)
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task1.ss1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create a `CLAUDE.md` for this workspace that tells Claude what the audit covers 
 
 #### Screenshot 2 — `CLAUDE.md` open in your editor showing the project overview, audit workflow, and safety rules
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task2.ss2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Ask Claude Code to read `CLAUDE.md` and propose a read-only, four-check audit pl
 
 #### Screenshot 3 — Claude Code showing the four-check plan, with no files created or modified
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task3.ss3.png)
 
 ---
 
@@ -62,13 +62,13 @@ Write a Bash script that runs the four checks from Task 3 using read-only `az` c
 
 #### Screenshot 4 — Your script open in your editor, showing the check functions and the `az` commands they call
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task4.ss4.png)
 
 ---
 
 #### Screenshot 5 — Output of `bash -n` (no syntax errors) and `ls -l` showing the script is executable
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task4.ss5.png)
 
 ---
 
@@ -82,7 +82,7 @@ Run the script against your live resources and read the report honestly, even if
 
 #### Screenshot 6 — Script output showing your Full Name and all four checks with a PASS, WARN, or FAIL result
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task5.ss6.png)
 
 ---
 
@@ -96,13 +96,13 @@ Create a Claude Code skill restricted to read-only tools (no `Write`) that runs 
 
 #### Screenshot 7 — Your skill file's frontmatter showing `allowed-tools` without `Write`
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task6.ss7.png)
 
 ---
 
 #### Screenshot 8 — `/azure-audit` output showing the baseline findings and Claude's explanation
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task6.ss8.png)
 
 ---
 
@@ -116,19 +116,19 @@ Pick one WARN or FAIL finding (or deliberately open an NSG rule to port 22 from 
 
 #### Screenshot 9 — Saved report showing the original finding before the fix
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task7.ss9.png)
 
 ---
 
 #### Screenshot 10 — Terminal output of the remediation command you ran yourself
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task7.ss10.png)
 
 ---
 
 #### Screenshot 11 — Second `/azure-audit` run (or report) showing the finding resolved
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment7.Task7.ss11.png)
 
 ---
 
@@ -136,7 +136,20 @@ Add your screenshot here.
 
 Compare this assignment to the AWS audit you built in Week 6: which finding categories map to each other across the two clouds, and what stayed exactly the same about the workflow even though the `az`/`aws` commands are completely different?
 
-Add your answer here
+The AWS audit from Week 6 and this Azure audit use the same security-audit workflow, even though the CLI commands are different.
+
+Finding categories that map across both clouds:
+
+Network security: AWS checked Security Groups for unrestricted SSH/MySQL access; Azure checks Network Security Groups for unrestricted inbound SSH/RDP access.
+Storage security: AWS checked S3 public-access settings; Azure checks whether the Storage Account allows public blob access.
+Disk encryption: AWS checked EBS volume encryption; Azure checks VM OS-disk encryption status.
+Database exposure: AWS checked whether the RDS database was publicly accessible; Azure checks whether the Azure Database for MySQL server has public network access enabled.
+
+What stayed exactly the same:
+
+The workflow remained Gather → Analyze → Remediate → Verify. In both assignments, the audit first uses read-only cloud CLI commands to collect evidence, produces a report with PASS/WARN/FAIL results, uses Agentic AI to analyze the evidence and recommend a safe remediation, and then requires the human to review and execute the remediation. A second audit is then performed to verify that the finding was resolved.
+
+The main difference is simply the cloud provider and CLI: AWS uses aws commands, while Azure uses az commands. The security principles, evidence-based reporting, least-privilege approach, and human-controlled remediation workflow remain the same.
 
 ---
 
