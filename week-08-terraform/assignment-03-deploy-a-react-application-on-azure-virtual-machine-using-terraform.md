@@ -24,7 +24,8 @@ Prepare your local environment for Terraform deployment by installing Terraform,
 
 Add a screenshot of the terminal showing successful `terraform version` output.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task0.ss1.png)
+
 
 ---
 
@@ -32,7 +33,8 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing successful `az version` output.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task0.ss2.png)
+
 
 ---
 
@@ -40,7 +42,8 @@ Add your screenshot here.
 
 Add a screenshot of the VS Code Extensions panel showing the HashiCorp Terraform extension installed and enabled.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task0.ss3.png)
+
 
 ---
 
@@ -80,7 +83,11 @@ The `cloud-init.sh` file must contain the complete automated React application d
 
 Add a screenshot of VS Code showing the AzureRM provider, resource group, and Network Security Group configuration in `main.tf`.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task1.ss4.png)
+
+![Screenshot](screenshots/Assignment3.Task1.ss4i.png)
+
+
 
 ---
 
@@ -90,7 +97,8 @@ Add a screenshot of VS Code showing the Linux virtual machine configuration, inc
 
 Ensure that passwords, private keys, account IDs, access tokens, and other sensitive information are hidden.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task1.ss5.png)
+
 
 ---
 
@@ -100,7 +108,8 @@ Add a screenshot of VS Code showing the completed `cloud-init.sh` deployment scr
 
 Ensure that no passwords, Azure credentials, access tokens, SSH private keys, or other sensitive information are visible.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task1.ss6.png)
+
 
 ---
 
@@ -108,7 +117,8 @@ Add your screenshot here.
 
 Add a screenshot of VS Code showing the public IP `output` block in `main.tf`.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task1.ss7.png)
+
 
 ---
 
