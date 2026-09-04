@@ -134,7 +134,7 @@ Initialize the Terraform working directory and download the required provider co
 
 Add a screenshot of the terminal showing successful `terraform init` output.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task2.ss8.png)
 
 ---
 
@@ -150,7 +150,7 @@ Review the Terraform execution plan and provision the Azure infrastructure.
 
 Add a screenshot showing the Terraform plan summary and the proposed resources.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task2.ss9.png)
 
 ---
 
@@ -158,7 +158,7 @@ Add your screenshot here.
 
 Add a screenshot showing successful `terraform apply` completion.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task3.ss10.png)
 
 ---
 
@@ -166,13 +166,13 @@ Add your screenshot here.
 
 Add a screenshot showing the VM public IP address returned by `terraform output`.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task3.ss11.png)
 
 ## VM Public IP Address
 
 Record the public IP address displayed by `terraform output`.
 
-**VM Public IP Address:** Add the VM public IP address here
+**VM Public IP Address:** 4.154.16.53
 
 ---
 
@@ -188,7 +188,7 @@ Connect to the Azure Linux virtual machine and confirm that the cloud-init/user 
 
 Add a screenshot of the SSH terminal showing a successful connection to the Azure VM and evidence that the React application deployment completed.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task4.ss12.png)
 
 ---
 
@@ -196,7 +196,7 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing that the Nginx service is running successfully.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task4.ss12.png)
 
 ---
 
@@ -214,7 +214,7 @@ Add a screenshot of the browser showing the deployed React application successfu
 
 Ensure that the Azure VM public IP is visible in the browser address bar.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task5.ss14.png)
 
 ---
 
@@ -230,7 +230,7 @@ Remove all Azure resources created by Terraform after completing the application
 
 Add a screenshot of the terminal showing successful `terraform destroy` completion.
 
-Add your screenshot here.
+![Screenshot](screenshots/Assignment3.Task6.ss15.png)
 
 ---
 
