@@ -94,11 +94,11 @@ Week 07 → Azure Cloud
 Week 08 → Terraform
 [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/)
 
-<!-- Week 09 → Ansible -->
-<!-- [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/) -->
+Week 09 → Ansible
+[![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/)
 
-<!-- Week 10 → Azure DevOps CI/CD -->
-<!-- [![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/) -->
+ Week 10 → Azure DevOps CI/CD
+[![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/)
 
 <!-- Week 11 → Docker -->
 <!-- [![Week 11 – Docker](./badges/week-11.svg)](./week-11-docker/) -->
@@ -139,7 +139,7 @@ Week 08 → Terraform
 | 06 | AWS Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_aws-devops-cloudcomputing-activity-7494198511140343809-MmFS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/building-and-testing-a-highly-available-two-tier-web-architecture-on-aws-ec9488820fa0?sharedUserId=anthoniaakwuohia |
 | 07 | Azure Cloud | ✅ Completed| ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-azure-microsoftazure-activity-7498041435535880192-nJJ4?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/building-and-deploying-a-resilient-3-tier-web-application-on-azure-7d03f1cf6790?sharedUserId=anthoniaakwuohia |
 | 08 | Terraform | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-terraform-activity-7501377888986865664-hjmR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/building-production-grade-aws-infrastructure-with-modular-terraform-deploying-epicbook-with-amazon-5942e95606c4?sharedUserId=anthoniaakwuohia |
-| 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
+| 09 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-terraform-share-7505241018733076480-x2Wv/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/building-human-in-the-loop-infrastructure-guardrails-with-ansible-and-claude-code-2d7a86b77c84?sharedUserId=anthoniaakwuohia |
 | 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
 | 11 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
 | 12 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
