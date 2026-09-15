@@ -1,13 +1,7 @@
 # Assignment 6 — Safety Rails for Your AI Agent
-<<<<<<< HEAD
- 
-Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
- 
-=======
 
 Part of the DevOps Micro Internship (DMI) with Agentic AI
 
->>>>>>> upstream/main
 ---
  
 ## Purpose
