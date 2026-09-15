@@ -256,10 +256,10 @@ Confirm that the static website is accessible from both public IP addresses.
 
 Add both deployed website URLs below:
 
-```text
+
 Server 1: http://16.170.251.182/
 Server 2: http://16.171.255.20/
-```
+
 
 ---
 
