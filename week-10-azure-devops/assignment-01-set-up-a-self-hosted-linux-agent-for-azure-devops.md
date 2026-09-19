@@ -165,7 +165,25 @@ Add your screenshot here.
 Paste the contents of your completed `azure-pipelines.yml` file below.
 
 ```yaml
-# Paste your completed azure-pipelines.yml here
+trigger: none
+ 
+pool:
+  name: SelfHostedPool
+ 
+steps:
+  - bash: |
+      echo "Submitted by: ANTHONIA AKWUOHIA"
+      echo "Agent name: $(Agent.Name)"
+      echo "Machine name: $(Agent.MachineName)"
+      echo "Operating system details:"
+      uname -a
+      echo "User executing the pipeline:"
+      whoami
+      echo "Disk usage:"
+      df -h
+      echo "Current working directory:"
+      pwd
+    displayName: Verify self-hosted Ubuntu agent
 ```
 
 > Do not include your PAT, SSH private key, password, or cloud credentials in the YAML file.
@@ -176,7 +194,8 @@ Paste the contents of your completed `azure-pipelines.yml` file below.
 
 Write a short summary of what you configured.
 
-[Write your summary here.]
+I configured a self-hosted Azure DevOps agent on an Ubuntu VM and registered it in the `SelfHostedPool` agent pool. I created and ran an Azure Pipeline that successfully executed on the self-hosted Ubuntu agent. The pipeline verified the agent, machine name, operating system, current user, disk usage, and working directory, confirming that Azure DevOps can successfully run jobs on the configured Ubuntu VM.
+
 
 ---
 
@@ -193,7 +212,7 @@ Add a screenshot of your LinkedIn post showing:
 
 Add your screenshot here.
 
-**LinkedIn Post URL:** [Paste your LinkedIn post URL here]
+**LinkedIn Post URL:** https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-azuredevops-cicd-share-7506395204707500032-ZrZy/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 

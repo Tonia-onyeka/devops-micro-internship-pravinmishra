@@ -255,7 +255,7 @@ Deploy and configure the Book Review App across the Web, Application, and Databa
 
 Add a screenshot showing the Book Review App homepage through the public endpoint.
 
-![Screenshot](screenshots/Assignment5.Task6.home.png)
+![Screenshot](screenshots/Ass5.Task6.ss20.jpg)
 
 ---
 
@@ -263,7 +263,7 @@ Add a screenshot showing the Book Review App homepage through the public endpoin
 
 Add a screenshot showing successful login or authentication.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task6.ss21.jpg)
 
 ---
 
@@ -271,7 +271,7 @@ Add your screenshot here.
 
 Add a screenshot showing the book listing or book details.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task6.ss22.jpg)
 
 ---
 
@@ -279,7 +279,7 @@ Add your screenshot here.
 
 Add a screenshot showing the review functionality working successfully.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task6.ss23.jpg)
 
 ---
 
@@ -287,7 +287,7 @@ Add your screenshot here.
 
 Add a screenshot showing that the backend or API is working successfully.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task6.ss24.jpg)
 
 ---
 
@@ -295,7 +295,7 @@ Add your screenshot here.
 
 Add a screenshot showing successful database reads and writes.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task6.ss25.jpg)
 
 ## Public Application URL
 
@@ -317,7 +317,7 @@ You do not need to submit your complete Claude Code conversation history. Includ
 
 Add a screenshot showing one useful example of AI-assisted Terraform generation or improvement.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task7.ss26.jpg)
 
 ---
 
@@ -325,7 +325,7 @@ Add your screenshot here.
 
 Add a screenshot showing one structured architecture or security review result.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task7.ss27.jpg)
 
 ---
 
@@ -333,7 +333,7 @@ Add your screenshot here.
 
 Add a screenshot showing one AI-assisted troubleshooting interaction based on collected evidence.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task7.ss28.jpg)
 
 ---
 
@@ -360,6 +360,7 @@ Confirm that the final review covers:
 
 Use Screenshot 27 as the focused evidence for the structured architecture or security review.
 
+Provides strong evidence for the networking, tier separation, routing, public/private exposure and database-networking review, but it does not by itself prove all 12 requested categories. The final review should therefore record the five warnings and one failure, resolve the blocking RDS issue, and explicitly verify secrets, Terraform/module quality, reliability and cost before declaring the capstone architecture fully complete.
 ---
 
 # Task 9 — Answer the Reflection Questions

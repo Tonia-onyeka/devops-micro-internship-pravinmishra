@@ -144,7 +144,7 @@ Add your screenshot here.
 
 Replace the placeholder with your actual website URL:
 
-[Paste your final website URL here]
+http://13.49.23.169/
 
 ---
 
@@ -152,7 +152,8 @@ Replace the placeholder with your actual website URL:
 
 Write a short summary of the completed CI/CD workflow.
 
-[Write your summary here.]
+I successfully implemented an automated CI/CD workflow using Azure DevOps and a self-hosted Ubuntu agent to deploy a static website to an AWS EC2 instance. The workflow uses Azure Repos for source control, an SSH service connection for secure deployment, and Nginx to serve the website. I verified the deployment through the EC2 public IP and confirmed that a new commit automatically triggered the pipeline and updated the website successfully.
+
 
 ---
 
@@ -171,7 +172,7 @@ Add your screenshot here.
 
 ## LinkedIn Post URL
 
-[Paste your public LinkedIn post URL here]
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-azuredevops-share-7506675274101506048-UGkl/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 > Do not expose AWS credentials, SSH private keys, passwords, PATs, or other sensitive information.
 
