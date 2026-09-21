@@ -37,7 +37,9 @@ Add a screenshot of Azure Repos showing:
 * `main` branch
 * Project files
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task1.ss1.png)
+
+![Screenshot](screenshots/Ass3.Task1.ss1i.png)
 
 ---
 
@@ -81,7 +83,12 @@ Add a screenshot of the Azure Pipeline YAML open in the editor showing:
 * Publish stage
 * Deploy stage
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task4.ss2.png)
+
+![Screenshot](screenshots/Ass3.Task4.ss2i.png)
+
+![Screenshot](screenshots/Ass3.Task4.ss2ii.png)
+
 
 > Do not expose passwords, private keys, tokens, or cloud credentials.
 
@@ -104,7 +111,9 @@ Add a screenshot of one Azure DevOps pipeline run showing all four stages succee
 * Publish
 * Deploy
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task5.ss3.png)
+
+![Screenshot](screenshots/Ass3.Task5.ss3i.png)
 
 ---
 
@@ -122,7 +131,7 @@ Add a screenshot of the pipeline SSH verification log or VM terminal showing the
 
 `/var/www/html`
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task6.ss4.png)
 
 ---
 
@@ -143,7 +152,9 @@ Add a browser screenshot showing:
 * Your Full Name
 * Deployment date
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task7.ss5.png)
+
+![Screenshot](screenshots/Ass3.Task7.ss5i.png)
 
 ## Final Application URL
 
@@ -151,7 +162,7 @@ Add your screenshot here.
 
 Replace the placeholder and paste your final application URL below:
 
-[Paste your final application URL here.]
+http://16.170.217.29/
 
 ---
 
@@ -159,7 +170,8 @@ Replace the placeholder and paste your final application URL below:
 
 Write a short explanation of the CI/CD workflow you created.
 
-[Write your summary here.]
+The CI/CD workflow automatically builds, tests, publishes, and deploys the React application whenever changes are pushed to the `main` branch. The Build stage installs dependencies and creates the production build, while the Test stage runs the React tests. If both stages succeed, the Publish stage creates the deployment artifact, and the Deploy stage transfers the verified build to the Nginx web server using the Azure DevOps SSH service connection. This workflow ensures that only successfully built and tested application files are deployed to the target server.
+
 
 ---
 
@@ -174,11 +186,11 @@ Add a screenshot of your LinkedIn post showing:
 * Post text
 * At least one image or link
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3Linkedpost.png)
 
 ## LinkedIn Post URL
 
-[Paste your public LinkedIn post URL here.]
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-azuredevops-cicd-share-7507742035848777730-2PeG/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 > Do not expose VM passwords, tokens, private keys, cloud credentials, or other sensitive information.
 
