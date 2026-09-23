@@ -70,7 +70,7 @@ Add a screenshot of the Infrastructure Pipeline run showing:
 * `backend_private_ip`
 * `mysql_fqdn`
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task4.ss1.png)
 
 > Do not expose the MySQL password, Client Secret, Terraform state, SSH private key, or another sensitive value.
 
@@ -86,7 +86,7 @@ Add a screenshot of the Azure Portal Resource Group overview showing:
 * Azure Database for MySQL Flexible Server
 * Related EpicBook resources
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task4.ss2.png)
 
 > Hide sensitive IDs, credentials, and database details.
 
@@ -124,7 +124,8 @@ Run the Application Pipeline to configure the VMs, deploy EpicBook, and verify t
 
 Add a screenshot of the Application Pipeline run summary showing all required stages or jobs succeeded.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task7.ss3.png)
+
 
 ---
 
@@ -137,7 +138,9 @@ Add a screenshot of the Application Pipeline log showing:
 * Zero failed hosts
 * Zero unreachable hosts
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task7.ss4.png)
+
+![Screenshot](screenshots/Ass4.Task7.ss4i.png)
 
 > Do not expose the SSH private key, MySQL password, Client Secret, or complete database connection string.
 
@@ -162,7 +165,7 @@ Add a browser screenshot showing:
 
 The screenshot may show a product, cart, or successful order view.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task8.ss5.png)
 
 > Do not expose credentials or sensitive information.
 
@@ -172,15 +175,15 @@ Add your screenshot here.
 
 ## Frontend Application URL
 
-[Paste your final EpicBook application URL here.]
+http://20.98.101.42
 
 ## Infrastructure Repository URL
 
-[Paste your Infrastructure Repository URL here.]
+https://github.com/Tonia-onyeka/infra-epicbook
 
 ## Application Repository URL
 
-[Paste your Application Repository URL here.]
+https://github.com/Tonia-onyeka/theepicboo
 
 ---
 
@@ -188,7 +191,11 @@ Add your screenshot here.
 
 Write a short explanation of why separate Infrastructure and Application Repositories were used.
 
-[Write your explanation here.]
+Separate Infrastructure and Application Repositories were used to maintain a clear separation of responsibilities.
+
+The Infrastructure Repository contains Terraform and infrastructure-related configuration used to provision and manage cloud resources. The Application Repository contains the application code, deployment configuration, Ansible files, and CI/CD workflow used to build and deploy the application.
+
+This separation reduces the risk of application changes accidentally modifying infrastructure and makes it easier to manage infrastructure and application lifecycles independently. It also supports clearer access control, review, and troubleshooting because each repository has a defined purpose.
 
 ---
 
@@ -201,7 +208,18 @@ Write a short explanation of how the following non-sensitive Terraform outputs w
 * `backend_private_ip`
 * `mysql_fqdn`
 
-[Write your explanation here.]
+The required non-sensitive Terraform outputs were obtained from the Infrastructure Repository after the infrastructure was provisioned.
+
+The following values were then manually transferred to the appropriate configuration files in the Application Repository:
+
+app_public_ip — used to identify the public endpoint or application host.
+backend_ansible_host — used as the Ansible inventory host for the backend server.
+backend_private_ip — used where the backend's private network address was required.
+mysql_fqdn — used to provide the backend application with the MySQL database hostname.
+
+Only the required non-sensitive outputs were transferred. Secrets such as database passwords, private keys, tokens, and credentials were not copied into the Application Repository.
+
+This manual handoff creates a controlled boundary between infrastructure provisioning and application deployment while allowing Ansible and the application pipeline to use the infrastructure information they require.
 
 ---
 
@@ -216,11 +234,11 @@ Add a screenshot of your LinkedIn post showing:
 * Post text
 * At least one image or link
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4LinkedInimg.png)
 
 ## LinkedIn Post URL
 
-[Paste your public LinkedIn post URL here.]
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_azure-azuredevops-terraform-share-7508502563886075906-PgVo/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 Your post must include:
 
