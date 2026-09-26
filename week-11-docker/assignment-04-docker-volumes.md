@@ -6,165 +6,325 @@ Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 ## Purpose
 
-In this assignment, you will learn how Docker Volumes and Bind Mounts provide persistent storage for containers, deploying applications that retain logs and data even after containers are stopped or removed.
+In this assignment, you will use Docker Bind Mounts and Docker Volumes to persist logs and application data outside a container’s lifecycle. You will verify that data remains available after containers are removed and recreated.
 
 ---
 
-# Task 1 — Deploy a Standalone Application with Persistent Logs Using Bind Mounts
+# Task 1 — Persist Nginx Logs Using a Bind Mount
 
 ## Goal
 
-Run an Nginx container (`myweb`) with a Bind Mount from `~/nginx-logs` to `/var/log/nginx`, verify the site loads, confirm logs are written, remove the container, and confirm the logs persist on the host.
+Deploy an Nginx container with a Bind Mount and verify that its log files remain on the VM host after the container is removed.
 
 ### Evidence
 
-#### Screenshot 1 — Output of `docker images`
+#### Screenshot 1 — Nginx Image Pull
+
+Add a screenshot of the terminal showing successful completion of:
+
+```bash
+docker pull nginx:alpine
+```
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 2 — Output of `docker search nginx`
+#### Screenshot 2 — Host Log Directory
+
+Add a screenshot of the terminal showing the created host directory:
+
+```text
+$HOME/nginx-logs
+```
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 3 — Successful `docker pull nginx` (if applicable)
+#### Screenshot 3 — Running Nginx Container with Port Mapping
+
+Add a screenshot of the terminal showing:
+
+```bash
+docker ps
+```
+
+The output must show the `myweb` container with:
+
+```text
+0.0.0.0:80->80/tcp
+```
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 4 — Creation of the `~/nginx-logs` directory
+#### Screenshot 4 — Nginx Welcome Page
+
+Add a browser screenshot showing the Nginx Welcome Page at:
+
+```text
+http://<YOUR-VM-PUBLIC-IP>
+```
+
+Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 5 — Output of `docker run` with the Bind Mount
+#### Screenshot 5 — Bind-Mounted Log Files
+
+Add a screenshot of the terminal showing the host log files and access-log content from:
+
+```text
+$HOME/nginx-logs
+```
+
+The output must show `access.log`, `error.log`, and an access-log entry created when you opened the Nginx page.
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 6 — Output of `docker ps` showing the running `myweb` container
+#### Screenshot 6 — Nginx Container Removed
+
+Add a screenshot of the terminal showing successful completion of:
+
+```bash
+docker stop myweb
+docker rm myweb
+```
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 7 — Browser displaying the Nginx Welcome Page
+#### Screenshot 7 — Logs Persist After Container Removal
+
+Add a screenshot of the terminal showing that `access.log` and `error.log` still exist in:
+
+```text
+$HOME/nginx-logs
+```
+
+The access log must retain its content after the container has been removed.
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 8 — Output of `ls ~/nginx-logs` showing `access.log` and `error.log`
-
-Add your screenshot here.
-
----
-
-#### Screenshot 9 — Successful removal of the container
-
-Add your screenshot here.
-
----
-
-#### Screenshot 10 — Output of `ls ~/nginx-logs` confirming the log files remain after the container has been removed
-
-Add your screenshot here.
-
----
-
-# Task 2 — Deploy Two Containers with Persistent Data Using Docker Volumes
+# Task 2 — Share Persistent Data Using a Docker Volume
 
 ## Goal
 
-Create a custom network `mynetwork` and a Docker volume `shared-data`, build and run a `backend` container that writes to the shared volume and a `frontend` container that reads from it, and confirm updates are reflected immediately.
+Deploy backend and frontend containers that share data through a named Docker Volume. Verify that the data remains after both containers are removed and recreated.
 
 ### Evidence
 
-#### Screenshot 1 — Project folder structure
+#### Screenshot 8 — Project File Structure
+
+Add a screenshot of the terminal showing the `two-tier-app` project structure, including separate `backend` and `frontend` directories with a `Dockerfile` and `index.js` file in each.
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 2 — Output of `docker network create mynetwork`
+#### Screenshot 9 — Custom Docker Network
+
+Add a screenshot of the terminal showing `mynetwork` in:
+
+```bash
+docker network ls
+```
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 3 — Output of `docker volume create shared-data`
+#### Screenshot 10 — Docker Volume
+
+Add a screenshot of the terminal showing `shared-data` in:
+
+```bash
+docker volume ls
+```
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 4 — Backend Dockerfile
+#### Screenshot 11 — Backend Dockerfile
+
+Add a screenshot of the terminal showing the completed backend `Dockerfile`.
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 5 — Successful backend image build
+#### Screenshot 12 — Backend Image Build
+
+Add a screenshot of the terminal showing successful completion of the `backend-app:latest` image build.
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 6 — Frontend Dockerfile
+#### Screenshot 13 — Running Backend Container
+
+Add a screenshot of the terminal showing:
+
+```bash
+docker ps
+```
+
+The output must show the running `backend` container.
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 7 — Successful frontend image build
+#### Screenshot 14 — Frontend Dockerfile
+
+Add a screenshot of the terminal showing the completed frontend `Dockerfile`.
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 8 — Output of `docker ps` showing both containers
+#### Screenshot 15 — Frontend Image Build
+
+Add a screenshot of the terminal showing successful completion of the `frontend-app:latest` image build.
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 9 — Successful execution of `docker exec backend curl http://localhost/write`
+#### Screenshot 16 — Running Backend and Frontend Containers
+
+Add a screenshot of the terminal showing:
+
+```bash
+docker ps
+```
+
+The output must show both `backend` and `frontend` containers running. Only `frontend` must have the published port mapping:
+
+```text
+0.0.0.0:80->80/tcp
+```
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 10 — Browser displaying "Hello from Backend!"
+#### Screenshot 17 — Backend Write Operation
+
+Add a screenshot of the terminal showing a successful backend write operation to the shared Docker Volume.
+
+The output must include:
+
+```text
+Data written: Hello from Backend!
+```
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 11 — Browser displaying "Test Data 1" after the first update
+#### Screenshot 18 — Frontend Reads Shared Data
+
+Add a browser screenshot showing:
+
+```text
+Hello from Backend!
+```
+
+Add your full name as a clear caption directly below the screenshot.
 
 Add your screenshot here.
 
 ---
 
-#### Screenshot 12 — Browser displaying "Test Data 2 - New Update" after the second update
+#### Screenshot 19 — First Shared-Data Update
+
+Add a browser screenshot showing:
+
+```text
+Test Data 1
+```
+
+Add your full name as a clear caption directly below the screenshot.
 
 Add your screenshot here.
 
 ---
 
-# LinkedIn Post (Optional)
+#### Screenshot 20 — Second Shared-Data Update
+
+Add a browser screenshot showing:
+
+```text
+Test Data 2 - New Update
+```
+
+Add your full name as a clear caption directly below the screenshot.
+
+Add your screenshot here.
+
+---
+
+#### Screenshot 21 — Container Removal and Recreation
+
+Add a screenshot of the terminal showing the `frontend` and `backend` containers removed and recreated using the same `shared-data` Docker Volume.
+
+Add your screenshot here.
+
+---
+
+#### Screenshot 22 — Data Persists After Recreation
+
+Add a browser screenshot showing:
+
+```text
+Test Data 2 - New Update
+```
+
+This proves that the `shared-data` Docker Volume outlived both application containers.
+
+Add your full name as a clear caption directly below the screenshot.
+
+Add your screenshot here.
+
+---
+
+# Storage Persistence Notes
+
+Write a short explanation covering:
+
+- The difference between a Bind Mount and a Docker Volume
+- How Task 1 proved Bind Mount persistence
+- How Task 2 proved Docker Volume persistence
+- Why Docker Volumes are commonly used for application data
+
+Write your explanation here.
+
+---
+
+# Public Application URL
+
+**Application URL:** `Add your VM public IP URL here`
+
+---
+
+# LinkedIn Requirement
 
 ## Goal
 
-Create a LinkedIn post covering the assignment, Docker Hub repository, steps performed, and key learning outcomes.
+Create a LinkedIn post about Docker Volumes and Bind Mounts, including one difference between them, how you verified persistent storage, and your key learning outcomes.
 
-## Evidence
+### Evidence
 
 #### LinkedIn Post URL
 
@@ -174,24 +334,46 @@ Paste your LinkedIn post URL here:
 
 ---
 
-#### Screenshot — Published LinkedIn post
+#### LinkedIn Post Screenshot
 
-Add your screenshot here.
+Add a screenshot of the published LinkedIn post here. Include a screenshot of the application displaying shared data.
 
 ---
 
 # Submission Instructions
 
-- Add all required screenshots in your submission
-- Full name must be visible in required screenshots
-- Do not expose sensitive information
+- Complete all tasks in sequence.
+- Include Screenshots 1–22 exactly as specified.
+- Include the Storage Persistence Notes section.
+- Include the public application URL.
+- Include the LinkedIn post URL and screenshot.
+- Ensure that your full name is visible in all terminal screenshots.
+- Add your full name as a clear caption below every browser screenshot.
+- Do not expose private keys, passwords, access keys, tokens, account IDs, or other sensitive information.
 
 ---
 
 # Completion Checklist
 
-- [ ] Task 1: Bind-mounted persistent logs verified before and after container removal (Screenshots 1–10)
-- [ ] Task 2: Docker volume shared between frontend and backend verified (Screenshots 1–12)
+- [ ] Nginx image pulled successfully
+- [ ] Host log directory created
+- [ ] Bind Mount configured successfully
+- [ ] Nginx logs remain after container removal
+- [ ] Custom Docker network created
+- [ ] Docker Volume created
+- [ ] Backend Dockerfile and image created
+- [ ] Frontend Dockerfile and image created
+- [ ] Both containers mount `shared-data`
+- [ ] Backend writes data to the Docker Volume
+- [ ] Frontend reads the same data from the Docker Volume
+- [ ] Updated data appears after browser refresh
+- [ ] Data remains after frontend and backend containers are removed and recreated
+- [ ] All required screenshots included
+- [ ] Storage Persistence Notes completed
+- [ ] Public application URL included
+- [ ] LinkedIn post URL and screenshot included
+- [ ] Full name visible in terminal screenshots
+- [ ] Browser screenshots have full-name captions
 - [ ] No sensitive information exposed
 
 ---
