@@ -1,4 +1,4 @@
-# Assignment 42 — Deploy a Static Website on a Cloud VM Using Docker
+# Assignment 01 — Deploy a Static Website on a Cloud VM Using Docker
 
 ---
 
