@@ -26,7 +26,7 @@ Add a screenshot of the terminal showing successful completion of:
 docker pull nginx:alpine
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task1.ss1.png)
 
 ---
 
@@ -38,7 +38,7 @@ Add a screenshot of the terminal showing the created host directory:
 $HOME/nginx-logs
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task1.ss2.png)
 
 ---
 
@@ -56,8 +56,7 @@ The output must show the `myweb` container with:
 0.0.0.0:80->80/tcp
 ```
 
-Add your screenshot here.
-
+![Screenshot](screenshots/Ass4.Task1.ss3.png)
 ---
 
 #### Screenshot 4 — Nginx Welcome Page
@@ -65,12 +64,12 @@ Add your screenshot here.
 Add a browser screenshot showing the Nginx Welcome Page at:
 
 ```text
-http://<YOUR-VM-PUBLIC-IP>
+http://16.171.9.51/
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task1.ss4.png)
 
 ---
 
@@ -84,7 +83,7 @@ $HOME/nginx-logs
 
 The output must show `access.log`, `error.log`, and an access-log entry created when you opened the Nginx page.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task1.ss5.png)
 
 ---
 
@@ -97,7 +96,7 @@ docker stop myweb
 docker rm myweb
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task1.ss6.png)
 
 ---
 
@@ -111,7 +110,7 @@ $HOME/nginx-logs
 
 The access log must retain its content after the container has been removed.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task1.ss7.png)
 
 ---
 
@@ -127,7 +126,7 @@ Deploy backend and frontend containers that share data through a named Docker Vo
 
 Add a screenshot of the terminal showing the `two-tier-app` project structure, including separate `backend` and `frontend` directories with a `Dockerfile` and `index.js` file in each.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss8.png)
 
 ---
 
@@ -139,7 +138,7 @@ Add a screenshot of the terminal showing `mynetwork` in:
 docker network ls
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss9.png)
 
 ---
 
@@ -151,7 +150,7 @@ Add a screenshot of the terminal showing `shared-data` in:
 docker volume ls
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss10.png)
 
 ---
 
@@ -159,7 +158,7 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing the completed backend `Dockerfile`.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss11.png)
 
 ---
 
@@ -167,7 +166,9 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing successful completion of the `backend-app:latest` image build.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss12.png)
+
+![Screenshot](screenshots/Ass4.Task2.ss12i.png)
 
 ---
 
@@ -181,7 +182,7 @@ docker ps
 
 The output must show the running `backend` container.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss13.png)
 
 ---
 
@@ -189,7 +190,7 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing the completed frontend `Dockerfile`.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss14.png)
 
 ---
 
@@ -197,7 +198,7 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing successful completion of the `frontend-app:latest` image build.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss15.png)
 
 ---
 
@@ -215,7 +216,7 @@ The output must show both `backend` and `frontend` containers running. Only `fro
 0.0.0.0:80->80/tcp
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss16.png)
 
 ---
 
@@ -229,7 +230,7 @@ The output must include:
 Data written: Hello from Backend!
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss17.png)
 
 ---
 
@@ -243,7 +244,7 @@ Hello from Backend!
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss18.png)
 
 ---
 
@@ -257,7 +258,7 @@ Test Data 1
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss19.png)
 
 ---
 
@@ -271,7 +272,7 @@ Test Data 2 - New Update
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss20.png)
 
 ---
 
@@ -279,7 +280,9 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing the `frontend` and `backend` containers removed and recreated using the same `shared-data` Docker Volume.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss21.png)
+
+![Screenshot](screenshots/Ass4.Task2.ss21i.png)
 
 ---
 
@@ -295,7 +298,7 @@ This proves that the `shared-data` Docker Volume outlived both application conta
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss22.png)
 
 ---
 
@@ -308,13 +311,19 @@ Write a short explanation covering:
 - How Task 2 proved Docker Volume persistence
 - Why Docker Volumes are commonly used for application data
 
-Write your explanation here.
+A Bind Mount maps a specific directory or file on the host machine directly into a container, while a Docker Volume is storage managed by Docker and is independent of the container’s lifecycle.
+
+In Task 1, I used a Bind Mount to store Nginx logs on the VM host. After removing the Nginx container, the access.log and error.log files were still available on the host, proving that the data persisted.
+
+In Task 2, I used a Docker Volume to share data between the backend and frontend containers. After removing and recreating both containers, the shared data was still available, proving that the volume persisted beyond the containers.
+
+Docker Volumes are commonly used for application data because they provide persistent, reusable, and Docker-managed storage, making them suitable for databases, application files, and other data that must survive container recreation.
 
 ---
 
 # Public Application URL
 
-**Application URL:** `Add your VM public IP URL here`
+**Application URL:** http://16.171.9.51/
 
 ---
 
@@ -330,13 +339,13 @@ Create a LinkedIn post about Docker Volumes and Bind Mounts, including one diffe
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-docker-dockervolumes-share-7511049789833334784-Vf7p/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of the published LinkedIn post here. Include a screenshot of the application displaying shared data.
+![Screenshot](screenshots/Ass4LinkedIn.png)
 
 ---
 

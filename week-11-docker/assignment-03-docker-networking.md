@@ -28,7 +28,7 @@ docker network ls
 
 The output must include the default `bridge`, `host`, and `none` networks.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task1.ss1.png)
 
 ---
 
@@ -40,7 +40,7 @@ Add a screenshot of the terminal showing successful completion of:
 docker pull nginx:alpine
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task1.ss2.png)
 
 ---
 
@@ -58,7 +58,7 @@ The output must show the running `myweb` container with:
 0.0.0.0:80->80/tcp
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task1.ss3.png)
 
 ---
 
@@ -67,12 +67,14 @@ Add your screenshot here.
 Add a browser screenshot showing the Nginx Welcome Page at:
 
 ```text
-http://<YOUR-VM-PUBLIC-IP>
+http://16.171.9.51/
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task1.ss4.png)
+
+http://16.171.9.51/
 
 ---
 
@@ -92,7 +94,7 @@ Add a screenshot of the terminal showing `mynetwork` in:
 docker network ls
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task2.ss5.png)
 
 ---
 
@@ -106,7 +108,7 @@ docker ps
 
 The output must show both `web` and `client` containers running without published host ports.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task2.ss6.png)
 
 ---
 
@@ -120,7 +122,7 @@ docker exec client wget -qO- http://web
 
 The output must display the Nginx Welcome Page HTML.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task2.ss7.png)
 
 ---
 
@@ -134,7 +136,7 @@ docker network inspect mynetwork
 
 The output must show both `web` and `client` connected to `mynetwork`.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task2.ss8.png)
 
 ---
 
@@ -156,7 +158,7 @@ docker network ls
 
 The output must include both `frontend-network` and `backend-network`.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task3.ss9.png)
 
 ---
 
@@ -174,7 +176,7 @@ The output must show:
 - `backend` without a published host port
 - `db` without a published host port
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task3.ss10.png)
 
 ---
 
@@ -188,7 +190,9 @@ docker network inspect frontend-network
 
 The output must show `frontend` and `backend`.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task3.ss11.png)
+
+![Screenshot](screenshots/Ass3.Task3.ss11i.png)
 
 ---
 
@@ -202,8 +206,9 @@ docker network inspect backend-network
 
 The output must show `backend` and `db`.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task3.ss12.png)
 
+![Screenshot](screenshots/Ass3.Task3.ss12i.png)
 ---
 
 #### Screenshot 13 — Frontend-to-Backend Communication
@@ -216,7 +221,7 @@ docker exec frontend wget -qO- http://backend
 
 The output must display the Nginx Welcome Page HTML.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task3.ss13.png)
 
 ---
 
@@ -224,7 +229,7 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing a successful connection to `db` on port `27017` from the `backend` container.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task3.ss14.png)
 
 ---
 
@@ -238,7 +243,7 @@ The output must include:
 Expected result: frontend cannot reach db
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task3.ss15.png)
 
 ---
 
@@ -247,12 +252,14 @@ Add your screenshot here.
 Add a browser screenshot showing the Nginx Welcome Page from the `frontend` container at:
 
 ```text
-http://<YOUR-VM-PUBLIC-IP>
+http://16.171.9.51/
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task3.ss16.png)
+
+
 
 ---
 
@@ -274,8 +281,8 @@ docker ps
 
 The output must show the running `fastapp` container.
 
-Add your screenshot here.
 
+![Screenshot](screenshots/Ass3.Task4.ss17.png)
 ---
 
 #### Screenshot 18 — Host Network Mode Verification
@@ -292,7 +299,7 @@ The output must confirm:
 "NetworkMode": "host"
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task4.ss18.png)
 
 ---
 
@@ -301,12 +308,12 @@ Add your screenshot here.
 Add a browser screenshot showing the Nginx Welcome Page at:
 
 ```text
-http://<YOUR-VM-PUBLIC-IP>
+http://16.171.9.51/
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task4.ss19.png)
 
 ---
 
@@ -319,7 +326,7 @@ docker stop fastapp
 docker rm fastapp
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass3.Task4.ss20.png)
 
 ---
 
@@ -332,7 +339,13 @@ Write a short note explaining:
 - Why the frontend could not access the database in Task 3
 - The difference between bridge mode and host network mode
 
-Write your note here.
+Docker’s default bridge network allows containers to communicate using IP addresses, but container-name-based communication is not automatically available in the same way as on a user-defined bridge network.
+
+A custom bridge network provides Docker’s built-in DNS service, allowing containers to communicate using their container names instead of hard-coded IP addresses.
+
+In Task 3, the frontend could not access the database because they were not connected to the same Docker network, so the frontend could not resolve or reach the database container by its name.
+
+The difference between bridge mode and host network mode is that bridge mode gives a container its own network namespace and virtual network interface, while host mode shares the host machine’s network stack directly. Host mode can provide simpler network access but offers less network isolation.
 
 ---
 
@@ -348,13 +361,13 @@ Create a LinkedIn post about the Docker networking modes explored, one key lesso
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-docker-dockernetworking-share-7510730522407567360-AkRB/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of the published LinkedIn post here.
+![Screenshot](screenshots/Ass3LinkedIN.png)
 
 ---
 
