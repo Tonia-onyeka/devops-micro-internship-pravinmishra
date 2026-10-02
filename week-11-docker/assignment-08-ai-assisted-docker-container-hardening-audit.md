@@ -33,7 +33,7 @@ docker-audit.sh
 SKILL.md
 ```
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task1.ss1.png)
 
 ---
 
@@ -49,7 +49,7 @@ Add the supplied `docker-audit` skill to Claude Code and confirm that it is avai
 
 Add a screenshot of Claude Code showing `docker-audit` in the available skill list.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task2.ss2.png)
 
 ---
 
@@ -70,7 +70,7 @@ Add a terminal screenshot showing:
 - Your full name
 - The usage message displayed when the script runs without a container name
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task3.ss3.png)
 
 ---
 
@@ -90,7 +90,7 @@ Add a terminal screenshot showing:
 - `docker ps`
 - The audit command using the selected target container name
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task4.ss4.png)
 
 ---
 
@@ -98,7 +98,7 @@ Add your screenshot here.
 
 Add a terminal screenshot showing the initial Docker audit results.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task4.ss5.png)
 
 ---
 
@@ -119,7 +119,9 @@ Add a Claude Code screenshot showing:
 - Recommended manual fix
 - Verification method
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task5.ss6.png)
+
+![Screenshot](screenshots/Ass8.Task5.ss6i.png)
 
 ---
 
@@ -135,7 +137,7 @@ Manually fix one WARN or FAIL finding from the initial audit.
 
 Add a screenshot of the updated Dockerfile or `docker-compose.yml` showing the selected hardening fix.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task6.ss7.png)
 
 ---
 
@@ -143,7 +145,7 @@ Add your screenshot here.
 
 Add a terminal screenshot showing your full name and the rebuilt or recreated service/container running successfully.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task6.ss8.png)
 
 ---
 
@@ -163,7 +165,9 @@ Add a terminal screenshot showing:
 - The updated running container
 - The final audit report
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task7.ss9.png)
+
+![Screenshot](screenshots/Ass8.Task7.ss9i.png)
 
 ---
 
@@ -176,8 +180,27 @@ Write a short comparison covering:
 - Final audit result
 - Security benefit of the improvement
 
-Write your comparison here.
+### Before-and-After Security Audit Comparison
 
+**Initial Finding:**  
+The initial audit reported an **Image Tag — WARN** because the frontend container used the untagged image reference `theepicbook-frontend`, which the audit treated as `latest`.
+
+**Change Applied:**  
+The Docker Compose configuration was manually updated to use the explicit image tag:
+
+`theepicbook-frontend:v1.0.0`
+
+The frontend service was then rebuilt and recreated using `docker compose up -d --build --no-deps frontend`.
+
+**Final Result:**  
+The final audit reported:
+
+`[PASS] Image tag — Image uses a specific tag: theepicbook-frontend:v1.0.0`
+
+The other checks remained unchanged, with the container running, health check configured, privileged mode disabled, and no host ports published. The container-user check remains a WARN because no non-root user was configured.
+
+**Security Benefit:**  
+Using an explicit image tag makes the deployment more deterministic and easier to identify and reproduce. It reduces ambiguity associated with an untagged or `latest` image reference and improves traceability during deployments and troubleshooting.
 ---
 
 # LinkedIn Requirement
@@ -188,14 +211,13 @@ Create a LinkedIn post about the container security checks you performed, one ha
 
 ### Evidence
 
-**LinkedIn Post URL:** `Add your LinkedIn post URL here`
+**LinkedIn Post URL:** https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-docker-containersecurity-share-7511820593403412480-HsPp/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 #### LinkedIn Post Screenshot
 
 Add a screenshot of the published LinkedIn post, including the final audit result.
 
-Add your screenshot here.
-
+![Screenshot](screenshots/Ass8LinkediN.png)
 ---
 
 # Submission Instructions
