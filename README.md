@@ -100,8 +100,8 @@ Week 09 → Ansible
 Week 10 → Azure DevOps CI/CD
 [![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/)
 
-<!-- Week 11 → Docker -->
-<!-- [![Week 11 – Docker](./badges/week-11.svg)](./week-11-docker/) -->
+Week 11 → Docker
+[![Week 11 – Docker](./badges/week-11.svg)](./week-11-docker/)
 
 <!-- Week 12 → Kubernetes -->
 <!-- [![Week 12 – K8s](./badges/week-12.svg)](./week-12-kubernetes/) -->
@@ -141,7 +141,7 @@ Week 10 → Azure DevOps CI/CD
 | 08 | Terraform | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-terraform-activity-7501377888986865664-hjmR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/building-production-grade-aws-infrastructure-with-modular-terraform-deploying-epicbook-with-amazon-5942e95606c4?sharedUserId=anthoniaakwuohia |
 | 09 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-terraform-share-7505241018733076480-x2Wv/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/building-human-in-the-loop-infrastructure-guardrails-with-ansible-and-claude-code-2d7a86b77c84?sharedUserId=anthoniaakwuohia |
 | 10 | Azure DevOps (CI/CD) | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-aws-azuredevops-share-7506675274101506048-UGkl/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/automating-react-app-deployments-with-azure-devops-ci-cd-a-step-by-step-guide-3312ae2042d9?sharedUserId=anthoniaakwuohia |
-| 11 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
+| 11 | Docker | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-docker-aws-share-7511815805773271040-AoIJ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q | https://medium.com/@anthoniaakwuohia/building-a-production-ready-docker-environment-for-epicbook-fc90915ecdc4?sharedUserId=anthoniaakwuohia |
 | 12 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
 | 13 | Final Project | ⬜ Not Started | ⏳ Pending | — | — |
 
