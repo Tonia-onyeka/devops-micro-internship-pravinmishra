@@ -513,6 +513,7 @@ Write a short note covering:
 All four Docker Compose services—database, backend, frontend, and reverse proxy—were verified as healthy. The public `/health` and `/api/cart` endpoints returned HTTP 200, and the EpicBook application loaded successfully through the VM public IP.
 
 A non-destructive `docker compose down` followed by `docker compose up -d` was performed. The stack restarted successfully, the `db_data` Docker volume remained present, and the public health and API endpoints continued to return HTTP 200.
+
 ---
 
 # Task 8 — Automate Deployment with CI/CD (Optional)
