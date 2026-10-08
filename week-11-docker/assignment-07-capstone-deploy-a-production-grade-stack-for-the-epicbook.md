@@ -89,6 +89,7 @@ Add a screenshot showing `frontend/Dockerfile`, including:
 - Static frontend files copied to the Nginx web root
 
 ![Screenshot](screenshots/Ass7.Task1.ss5.png)
+
 ---
 
 #### Screenshot 6 — Docker Ignore Files
@@ -526,7 +527,7 @@ Optionally automate image build, image push, and deployment through GitHub Actio
 
 Add a screenshot showing a successful pipeline run with build, image push, deployment, and verification stages.
 
-Add your screenshot here.
+## Add your screenshot here.
 
 ---
 
@@ -540,7 +541,7 @@ Write a short note covering:
 - Deployment trigger
 - Manual approval or secret-handling approach
 
-Write your note here.
+## Write your note here.
 
 ---
 
