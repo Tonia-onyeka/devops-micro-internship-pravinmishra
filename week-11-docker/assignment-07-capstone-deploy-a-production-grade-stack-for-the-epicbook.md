@@ -527,7 +527,7 @@ Optionally automate image build, image push, and deployment through GitHub Actio
 
 Add a screenshot showing a successful pipeline run with build, image push, deployment, and verification stages.
 
-## Add your screenshot here.
+Deployment credentials and registry authentication are securely stored as GitHub Actions Secrets. The final verification stage confirms that the updated application is successfully running and accessible.
 
 ---
 
