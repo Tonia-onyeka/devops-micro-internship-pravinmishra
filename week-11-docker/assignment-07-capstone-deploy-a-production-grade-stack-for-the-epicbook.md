@@ -541,7 +541,19 @@ Write a short note covering:
 - Deployment trigger
 - Manual approval or secret-handling approach
 
-## Write your note here.
+CI/CD Platform: GitHub Actions was used to automate the application deployment workflow.
+
+Image Tagging: Docker images were tagged using the Git commit SHA to provide a unique and traceable version for each build.
+
+Container Registry: Docker images were pushed to GitHub Container Registry (GHCR).
+
+Deployment Trigger: The pipeline was triggered automatically when changes were pushed to the main branch.
+
+Pipeline Workflow: The workflow built the Docker image, pushed it to the registry, deployed the updated image to the cloud VM, and verified that the application was running successfully.
+
+Secret Handling: Sensitive credentials such as registry authentication and deployment SSH credentials were stored as GitHub Actions Secrets rather than being hard-coded in the workflow.
+
+Verification: The final stage confirmed that the deployed application and required health endpoint were accessible after deployment.
 
 ---
 
