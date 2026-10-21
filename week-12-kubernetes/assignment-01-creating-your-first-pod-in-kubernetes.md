@@ -94,7 +94,7 @@ Inspect the running Pod, view its logs, and open a shell inside the NGINX contai
 
 #### Screenshot 08 — Output of `kFilename: `08-pod-logs.png`
 
-![Screenshot](screenshots/Ass1.08-pod-logs.png)
+![Screenshot](screenshots/Ass1.08-pod-logs.png)-
 
 
 If no logs appear, add a caption stating that the command completed without output.
