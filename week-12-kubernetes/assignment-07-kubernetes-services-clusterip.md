@@ -30,7 +30,7 @@ Create and enter a dedicated directory for the ClusterIP Service lab.
 
 #### Screenshot 1 — Terminal showing that you are working inside `~/k8s-labs/services/clusterip`
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task1.ss1.png)
 
 ---
 
@@ -56,13 +56,15 @@ Create an NGINX Deployment with labels, readiness probes, and liveness probes th
 
 #### Screenshot 2 — Completed `00-nginx-deploy.yaml` manifest
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task2.ss2.png)
+
 
 ---
 
 #### Screenshot 3 — Output showing successful rollout and two ready NGINX Pods
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task3.ss3.png)
+
 
 ---
 
@@ -92,13 +94,15 @@ Create a stable internal Service that routes traffic to the NGINX Pods.
 
 #### Screenshot 4 — Completed `01-nginx-svc-clusterip.yaml` manifest
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task3.ss4.png)
+
 
 ---
 
 #### Screenshot 5 — Output showing the ClusterIP Service, endpoints, or EndpointSlices
 
-Add your screenshot here.
+![Screenshot](screenshots/Screenshot%202026-10-23%20052448.png)
+
 
 ---
 
@@ -134,19 +138,22 @@ Create a client Pod and access the NGINX Service using DNS and its ClusterIP.
 
 #### Screenshot 6 — Output showing the `tester` Pod running
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task4.ss6.png)
+
 
 ---
 
 #### Screenshot 7 — Successful Service request using DNS name and ClusterIP
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task4.ss7.png)
+
 
 ---
 
 #### Screenshot 8 — Successful DNS lookup for the Service
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task4.ss8.png)
+
 
 ---
 
@@ -176,25 +183,29 @@ Break the Service selector, observe that usable endpoints disappear, and then re
 
 #### Screenshot 9 — `02-nginx-svc-selector-broken.yaml` showing the incorrect selector
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task5.ss9.png)
+
 
 ---
 
 #### Screenshot 10 — Empty endpoints or EndpointSlice output after applying the broken selector
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task5.ss10.png)
+
 
 ---
 
 #### Screenshot 11 — Failed request output from the `tester` Pod
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task5.ss11.png)
+
 
 ---
 
 #### Screenshot 12 — Restored endpoints and successful Service request
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task5.ss12.png)
+
 
 ---
 
