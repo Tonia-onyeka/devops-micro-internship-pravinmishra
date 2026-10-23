@@ -32,7 +32,7 @@ Create and enter a dedicated directory for the readiness-probe lab.
 
 #### Screenshot 1 — Terminal showing that you are working inside `~/k8s-labs/health-probes-readiness`
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task1.ss1.png)
 
 ---
 
@@ -40,11 +40,11 @@ Add your screenshot here.
 
 **1. What is the purpose of a readiness probe?**
 
-Add your answer here.
+A readiness probe checks whether a container is ready to receive traffic. If the probe fails, Kubernetes removes the Pod from the Service's available endpoints until it becomes ready again.
 
 **2. Why is a Pod being Running not always enough to confirm it can serve traffic?**
 
-Add your answer here.
+Running means the Pod's containers have started, but the application may still be initializing, loading data, or experiencing errors. A readiness probe verifies that the application is actually ready to handle requests.
 
 ---
 
@@ -58,19 +58,18 @@ Create a baseline NGINX Deployment with two replicas and no readiness probe.
 
 #### Screenshot 2 — Completed `00-nginx-deploy-baseline.yaml` manifest
 
-Add your screenshot here.
-
+![Screenshot](screenshots/Ass5.Task2.ss2.png)
 ---
 
 #### Screenshot 3 — Output showing a successful rollout and two running NGINX Pods
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task2.ss3.png)
 
 ---
 
 #### Screenshot 4 — Relevant output from `kubectl describe deployment nginx-deployment`
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task2.ss4.png)
 
 ---
 
@@ -78,15 +77,15 @@ Add your screenshot here.
 
 **1. How many replicas does this Deployment maintain?**
 
-Add your answer here.
+The Deployment maintains 2 replicas of the NGINX Pod.
 
 **2. What does `maxUnavailable: 0` mean during a rolling update?**
 
-Add your answer here.
+It means Kubernetes should not allow any desired replicas to be unavailable during a rolling update. It creates a replacement Pod before removing an existing one, helping maintain application availability.
 
 **3. Is a readiness probe configured in this baseline Deployment?**
 
-Add your answer here.
+No. The baseline Deployment does not have a readiness probe configured. Kubernetes uses its default container readiness behavior until a readiness probe is added.
 
 ---
 
@@ -100,19 +99,19 @@ Add an HTTP readiness probe so Kubernetes checks whether each NGINX container is
 
 #### Screenshot 5 — Completed `01-nginx-deploy-readiness.yaml` manifest showing the readiness probe
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task3.ss5.png)
 
 ---
 
 #### Screenshot 6 — Output of the successful rollout and ready Pods
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task3.ss6.png)
 
 ---
 
 #### Screenshot 7 — Pod description showing readiness conditions and readiness probe details
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task3.ss7.png)
 
 ---
 
@@ -120,19 +119,19 @@ Add your screenshot here.
 
 **1. What path and port does the readiness probe check?**
 
-Add your answer here.
+The readiness probe checks the root path / on port 80 using an HTTP GET request.
 
 **2. What does `initialDelaySeconds: 2` do?**
 
-Add your answer here.
+It tells Kubernetes to wait 2 seconds after the container starts before performing the first readiness probe.
 
 **3. What does `periodSeconds: 5` do?**
 
-Add your answer here.
+It tells Kubernetes to perform the readiness probe every 5 seconds.
 
 **4. What must happen before Kubernetes considers this Pod ready?**
 
-Add your answer here.
+The container must successfully respond to the HTTP GET request on path / at port 80. When the probe succeeds, Kubernetes marks the Pod as ready to receive traffic.
 
 ---
 
@@ -146,45 +145,47 @@ Intentionally fail the readiness probe, observe the NotReady behavior, and then 
 
 #### Screenshot 8 — `02-nginx-readiness-broken.yaml` showing `/does-not-exist`
 
-Add your screenshot here.
-
+![Screenshot](screenshots/Ass5.Task4.ss8.png)
 ---
 
 #### Screenshot 9 — Output showing the rollout timeout or incomplete rollout
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task4.ss9.png)
 
 ---
 
 #### Screenshot 10 — Pod details showing `Ready: False` or readiness-probe failure events
 
-Add your screenshot here.
 
+![Screenshot](screenshots/Ass5.Task4.ss10i.png)
+
+![Screenshot](screenshots/Ass5.Task4.ss10ii.png)
 ---
 
 #### Screenshot 11 — Output showing successful rollout and ready Pods after the fix
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task4.ss11.png)
 
+![Screenshot](screenshots/Ass5.Task4.ss11i.png)
 ---
 
 ### Notes
 
 **1. Why did the readiness probe fail?**
 
-Add your answer here.
+The readiness probe failed because its path was changed from / to /does-not-exist. NGINX returned HTTP 404 Not Found because the requested path did not exist.
 
 **2. What happened to the Pod readiness status?**
 
-Add your answer here.
+The new Pod's readiness status changed to Ready: False, and ContainersReady was also False. Although the container was running, Kubernetes did not consider it ready to receive traffic.
 
 **3. Why did the rollout fail to complete?**
 
-Add your answer here.
+The rollout could not complete because the new Pod failed its readiness probe. The maxUnavailable: 0 setting prevented Kubernetes from removing the existing available Pods before their replacements became ready.
 
 **4. How did you restore the Deployment successfully?**
 
-Add your answer here.
+I copied the original working readiness manifest into 03-nginx-readiness-fixed.yaml, restored the probe path to /, and applied the fixed manifest. The rollout completed successfully, and both NGINX Pods returned to 1/1 Running.
 
 ---
 
@@ -198,57 +199,54 @@ Observe how readiness prevents a bad new Pod from replacing healthy Pods during 
 
 #### Screenshot 12 — Successful update command and rollout status
 
-Add your screenshot here.
-
+![Screenshot](screenshots/Ass5.Task5.ss12.png)
 ---
 
 #### Screenshot 13 — ReplicaSets and Pods after the successful rolling update
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task5.ss13.png)
 
 ---
 
 #### Screenshot 14 — Completed `04-readiness-broken-patch.yaml`
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task5.ss14.png)
 
 ---
 
 #### Screenshot 15 — Output showing the expected stalled rollout or timeout
 
-Add your screenshot here.
-
+![Screenshot](screenshots/Ass5.Task5.ss15.png)
 ---
 
 #### Screenshot 16 — Deployment or Pod output showing the effect of the broken readiness probe
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.Task5.ss16.png)
 
 ---
 
 #### Screenshot 17 — Successful rollout status after restoring the fixed configuration
 
-Add your screenshot here.
-
+![Screenshot](screenshots/Ass5.Task5.ss17.png)
 ---
 
 ### Notes
 
 **1. What happened during the successful rolling update?**
 
-Add your answer here.
+Kubernetes gradually replaced the old NGINX Pods with new Pods running nginx:1.22.1. The new Pods passed their readiness probes, and the rollout completed successfully.
 
 **2. Why did Kubernetes create a new ReplicaSet?**
 
-Add your answer here.
+Kubernetes created a new ReplicaSet because the Deployment's Pod template changed when the NGINX image was updated. Each new Pod template revision is managed by a new ReplicaSet.
 
 **3. Why were the new Pods unable to replace the existing healthy Pods after readiness was broken?**
 
-Add your answer here.
+The new Pods failed their readiness probes because the path /does-not-exist returned HTTP 404 Not Found. Kubernetes therefore considered them NotReady and did not treat them as available replacements for the healthy Pods.
 
 **4. How does `maxUnavailable: 0` protect availability during this rollout?**
 
-Add your answer here.
+It prevents Kubernetes from reducing the number of available replicas below the desired count during the rolling update. With two desired replicas, Kubernetes preserves the two healthy existing Pods while waiting for the new Pods to pass their readiness probes.
 
 ---
 
@@ -262,11 +260,11 @@ Share what you learned about Kubernetes readiness probes and how they protect ro
 
 #### Screenshot 18 — Published LinkedIn post
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass5.LinkedIn.png)
 
 #### Linkedin post link
 
-Add your post link here
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-kubernetes-cloudnative-share-7519059648159703040-qINh/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 

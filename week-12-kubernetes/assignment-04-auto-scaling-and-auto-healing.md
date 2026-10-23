@@ -34,7 +34,7 @@ Create and enter a dedicated directory for the auto-scaling lab.
 
 #### Screenshot 1 — Terminal showing that you are working inside `~/k8s-labs/autoscaling`
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task1.ss1.png)
 
 ---
 
@@ -42,13 +42,13 @@ Add your screenshot here.
 
 **1. What is the difference between auto-healing and auto-scaling?**
 
-Add your answer here.
+Auto-healing automatically replaces or restarts failed Pods to maintain application availability. Auto-scaling automatically increases or decreases the number of Pods based on workload demand or resource utilization.
 
 ---
 
 **2. Which Kubernetes feature will you use for CPU-based auto-scaling?**
 
-Add your answer here.
+The Horizontal Pod Autoscaler (HPA) adjusts the number of Pod replicas based on CPU utilization, memory utilization, or other configured metrics. For this assignment, I will use CPU utilization to scale the Deployment automatically.
 
 ---
 
@@ -62,25 +62,24 @@ Create a Deployment with two replicas, delete one Pod, and observe Kubernetes cr
 
 #### Screenshot 2 — Completed `autohealing-deployment.yaml` manifest
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss2.png)
 
 ---
 
 #### Screenshot 3 — Output of `kubectl get pods` showing two running Pods before deletion
 
-Add your screenshot here.
-
+![Screenshot](screenshots/Ass4.Task2.ss3.png)
 ---
 
 #### Screenshot 4 — Output of the `kubectl delete pod` command
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss4.png)
 
 ---
 
 #### Screenshot 5 — Output of `kubectl get pods` showing the replacement Pod and two running Pods
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task2.ss5.png)
 
 ---
 
@@ -88,19 +87,19 @@ Add your screenshot here.
 
 **1. What happened after you deleted one Pod?**
 
-Add your answer here.
+Kubernetes automatically created a replacement Pod to maintain the desired number of two replicas in the Deployment.
 
 ---
 
 **2. What Kubernetes resource maintains the desired replica count for this Deployment?**
 
-Add your answer here.
+The Deployment controller, through its managed ReplicaSet, maintains the desired replica count and ensures that two Pods are running.
 
 ---
 
 **3. What proves that auto-healing worked?**
 
-Add your answer here.
+After deleting one Pod, running kubectl get pods showed a new Pod with a different name. Both demo-autohealing Pods returned to 1/1 Running, confirming that Kubernetes automatically replaced the deleted Pod.
 
 ---
 
@@ -114,13 +113,13 @@ Create a Deployment with CPU resource requests and limits so that HPA can calcul
 
 #### Screenshot 6 — Completed `hpa-deployment.yaml` manifest showing CPU requests and limits
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task3.ss6.png)
 
 ---
 
 #### Screenshot 7 — Output showing `nginx-deployment` and its running Pods
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task3.ss7.png)
 
 ---
 
@@ -128,19 +127,19 @@ Add your screenshot here.
 
 **1. What does `cpu: "100m"` mean?**
 
-Add your answer here.
+100m means 100 millicores, equivalent to 0.1 of a CPU core.
 
 ---
 
 **2. What is the difference between a CPU request and a CPU limit?**
 
-Add your answer here.
+A CPU request is the amount of CPU Kubernetes uses to schedule a Pod on a suitable node. A CPU limit is the maximum CPU time the container can use.
 
 ---
 
 **3. Why does CPU-based HPA require CPU requests?**
 
-Add your answer here.
+CPU-based HPA uses CPU requests as the baseline to calculate CPU utilization percentage and determine when to scale the number of Pod replicas up or down.
 
 ---
 
@@ -154,7 +153,7 @@ Ensure the cluster can collect resource metrics for the HPA.
 
 #### Screenshot 8 — Output showing Metrics Server running, or `kubectl top pods` displaying Pod metrics
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task4.ss8.png)
 
 ---
 
@@ -162,19 +161,19 @@ Add your screenshot here.
 
 **1. Why does HPA need Metrics Server?**
 
-Add your answer here.
+Metrics Server provides CPU and memory usage metrics that the Horizontal Pod Autoscaler (HPA) uses to determine when to increase or decrease the number of Pod replicas based on resource utilization.
 
 ---
 
 **2. What issue can occur if Metrics Server is not working?**
 
-Add your answer here.
+HPA may be unable to retrieve CPU or memory metrics, preventing it from making scaling decisions correctly. Commands such as kubectl top pods may also return a Metrics API error.
 
 ---
 
 **3. What does `kubectl top pods` help you check?**
 
-Add your answer here.
+The kubectl top pods command displays the current CPU and memory usage of running Pods, helping administrators monitor resource consumption and troubleshoot performance issues.
 
 ---
 
@@ -188,13 +187,13 @@ Create an HPA that keeps at least two Pods running and can scale up to five Pods
 
 #### Screenshot 9 — The imperative command output OR completed `hpa-nginx.yaml` manifest
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task5.ss9.png)
 
 ---
 
 #### Screenshot 10 — Output of `kubectl get hpa` and the relevant `kubectl describe hpa` command
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.Task5.ss10.png)
 
 ---
 
@@ -202,25 +201,25 @@ Add your screenshot here.
 
 **1. What does `minReplicas: 2` mean?**
 
-Add your answer here.
+It means Kubernetes will maintain at least two Pod replicas for the Deployment, even when CPU utilization is low.
 
 ---
 
 **2. What does `maxReplicas: 5` mean?**
 
-Add your answer here.
+It means the HPA can scale the Deployment up to a maximum of five Pod replicas when resource demand increases.
 
 ---
 
 **3. What does `averageUtilization: 50` mean?**
 
-Add your answer here.
+It sets the target average CPU utilization to 50% of the CPU resources requested by the containers. The HPA uses this target to decide when to scale the number of replicas up or down.
 
 ---
 
 **4. Why should only one HPA manage a Deployment at a time?**
 
-Add your answer here.
+Multiple HPAs managing the same Deployment can conflict by attempting to control its replica count independently. This can cause unpredictable scaling behavior. Each Deployment should have one HPA responsible for managing its scaling.
 
 ---
 
@@ -238,14 +237,13 @@ Task status: Add your status here.
 
 #### Screenshot 11 — Terminal showing the CPU-load command running inside the selected Pod
 
-Add your screenshot here if completed.
+![Screenshot](screenshots/Ass4.Task6.ss11.png)
 
 ---
 
 #### Screenshot 12 — Output of `kubectl get hpa` and `kubectl get pods` while HPA evaluates or changes the replica count
 
-Add your screenshot here if completed.
-
+![Screenshot](screenshots/Ass4.Task6.ss12.png)
 ---
 
 ### Notes
@@ -254,19 +252,19 @@ Complete these answers only if you perform the optional test.
 
 **1. Did the HPA change the number of Pods? Explain what you observed.**
 
-Add your answer here.
+Yes. The HPA increased the number of NGINX Pods from 2 to 4 when CPU utilization reached 50%. After I stopped the CPU-load command, utilization returned to 0%, and the Deployment eventually scaled back down to 2 Pods.
 
 ---
 
 **2. If scaling did not happen, what are two possible reasons?**
 
-Add your answer here, or write “Not applicable — scaling occurred.”
+Not applicable — scaling occurred.
 
 ---
 
 **3. Why is automatic scale-down useful after traffic decreases?**
 
-Add your answer here.
+Automatic scale-down reduces unnecessary resource consumption when demand decreases. It helps improve resource efficiency and reduce infrastructure costs while maintaining the minimum number of replicas needed for availability.
 
 ---
 
@@ -276,11 +274,11 @@ Add your answer here.
 
 #### Screenshot 13 — Published LinkedIn post showing your name, the required explanation, and the attached Kubernetes screenshot
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass4.LinkedIn.png)
 
 #### Linkedin Post Link
 
-Add your link here
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-kubernetes-autoscaling-share-7519023753243299841-u6rg/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 

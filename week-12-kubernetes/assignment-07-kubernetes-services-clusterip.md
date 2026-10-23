@@ -38,11 +38,11 @@ Add your screenshot here.
 
 **1. Why is it not reliable to communicate with an application using a Pod IP address?**
 
-Add your answer here.
+Pod IP addresses are temporary and can change when Pods are restarted, recreated, or rescheduled. Therefore, using a Pod IP directly is unreliable for consistent application access.
 
 **2. What Kubernetes resource provides a stable internal address for a group of Pods?**
 
-Add your answer here.
+A Kubernetes Service, specifically a ClusterIP Service, provides a stable internal IP address and DNS name for accessing a group of Pods. It forwards traffic to eligible Pods selected by labels.
 
 ---
 
@@ -70,15 +70,15 @@ Add your screenshot here.
 
 **1. Which label will the Service use to find these Pods?**
 
-Add your answer here.
+The Service will use the label app: nginx to select the NGINX Pods.
 
 **2. Why is readiness important before connecting Pods to a Service?**
 
-Add your answer here.
+Readiness ensures that only Pods that are ready to handle requests receive traffic through the Service. This helps prevent requests from being sent to unhealthy or not-yet-ready application instances.
 
 **3. What port does the NGINX container listen on?**
 
-Add your answer here.
+The NGINX container listens on port 80 (HTTP).
 
 ---
 
@@ -106,19 +106,21 @@ Add your screenshot here.
 
 **1. What is the purpose of a ClusterIP Service?**
 
-Add your answer here.
+A ClusterIP Service provides a stable internal IP address and DNS name for accessing a group of Pods within a Kubernetes cluster. It distributes traffic to eligible backend Pods without exposing the application directly to external networks.
 
 **2. What is the difference between `port` and `targetPort`?**
 
-Add your answer here.
+- port is the port exposed by the Service for clients to access.
+- targetPort is the port on the backend Pods to which the Service forwards traffic.
+In this lab, both are set to port 80.
 
 **3. Why must the Service selector match the Pod labels?**
 
-Add your answer here.
+The selector app: nginx must match the labels on the NGINX Pods so Kubernetes can identify the correct backends and register them as Service endpoints. If the selector does not match, the Service will have no eligible endpoints.
 
 **4. What information do EndpointSlices contain?**
 
-Add your answer here.
+EndpointSlices contain backend endpoint information, including Pod IP addresses, ports, address type, and readiness, serving, and terminating conditions. Kubernetes uses them to track the endpoints available behind a Service.
 
 ---
 
@@ -152,15 +154,15 @@ Add your screenshot here.
 
 **1. Why should an application use `nginx-svc` instead of a Pod IP address?**
 
-Add your answer here.
+An application should use nginx-svc because it provides a stable DNS name for accessing the NGINX Service. Pod IP addresses can change when Pods are restarted or recreated, but the Service name remains stable.
 
 **2. What does the DNS name `nginx-svc.default.svc.cluster.local` represent?**
 
-Add your answer here.
+It is the fully qualified domain name (FQDN) of the nginx-svc Service in the default namespace within the Kubernetes cluster. It resolves to the Service's internal ClusterIP address.
 
 **3. Why can the client access the Service even if the backend Pod IPs change?**
 
-Add your answer here.
+The Service provides a stable ClusterIP and DNS name. Kubernetes automatically updates the Service's EndpointSlices when backend Pods change, allowing traffic to reach the current eligible Pods without requiring the client to know their individual IP addresses.
 
 ---
 
@@ -200,15 +202,15 @@ Add your screenshot here.
 
 **1. Why did the Service endpoints become empty?**
 
-Add your answer here.
+The Service endpoints became empty because I changed the Service selector from app: nginx to app: does-not-match. Since this selector did not match the labels on the NGINX Pods, Kubernetes could not register them as backend endpoints.
 
 **2. What caused the request from the client Pod to fail?**
 
-Add your answer here.
+The request from the client Pod (tester) failed because the Service had no matching backend endpoints to forward traffic to. Although the Service's ClusterIP and DNS name still existed, the request returned a Connection refused error because no backend Pods were available.
 
 **3. How did you restore connectivity to the NGINX Pods?**
 
-Add your answer here.
+I restored connectivity by applying the original Service manifest, 01-nginx-svc-clusterip.yaml, which restored the selector to app: nginx. Kubernetes then registered the matching NGINX Pods as endpoints again, and the HTTP request through http://nginx-svc successfully returned the NGINX welcome page.
 
 ---
 
@@ -254,15 +256,15 @@ Add your screenshot here.
 
 **1. Why was the new NotReady Pod excluded from ready Service backends?**
 
-Add your answer here.
+The new Pod was excluded because its readiness probe checked the nonexistent path /does-not-exist, which returned HTTP 404 errors. As a result, Kubernetes marked the Pod as NotReady (ready: false) and excluded it from ready Service backends. The existing healthy Pod remained available to handle requests.
 
 **2. What is the relationship between readiness probes and Service routing?**
 
-Add your answer here.
+Readiness probes determine whether a Pod is ready to receive application traffic. Kubernetes updates the Service's EndpointSlice based on Pod readiness, allowing Services to route traffic to ready backends while excluding NotReady Pods. In this task, the healthy Pod remained a ready endpoint, while the new Pod was marked NotReady.
 
 **3. Why does this behavior protect users from unhealthy application instances?**
 
-Add your answer here.
+This behavior prevents user requests from being routed to application instances that are not ready to serve traffic. It helps maintain application availability and reliability because healthy Pods can continue handling requests while unhealthy or incorrectly configured Pods recover. In this task, the NGINX Service continued returning the welcome page through the healthy Pod despite the failed readiness checks on the replacement Pod.
 
 ---
 
@@ -280,7 +282,7 @@ Add your screenshot here.
 
 #### Linkedin post link
 
-Paste your link here
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-kubernetes-cloudcomputing-share-7519343001257623552-zAo2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 

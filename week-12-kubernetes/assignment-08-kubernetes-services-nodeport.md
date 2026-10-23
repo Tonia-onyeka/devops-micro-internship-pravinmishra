@@ -26,11 +26,11 @@ Add your screenshot here.
 
 **1. What is the difference between ClusterIP and NodePort?**
 
-Add your answer here.
+ClusterIP exposes a Service using an internal IP address that is accessible within the Kubernetes cluster by default. NodePort exposes a Service on a designated port across the cluster's nodes, allowing clients outside the cluster to access the application through a node's IP address and that port, subject to network and firewall configuration.
 
 **2. What does a NodePort Service allow users to do?**
 
-Add your answer here.
+A NodePort Service allows users to access an application running inside a Kubernetes cluster from outside the cluster by connecting to a node's IP address and the assigned NodePort. Kubernetes forwards the traffic to the appropriate backend Pods selected by the Service.
 
 ---
 
@@ -56,15 +56,15 @@ Add your screenshot here.
 
 **1. Which label will the NodePort Service use to find the NGINX Pods?**
 
-Add your answer here.
+The NodePort Service will use the selector app: nginx to identify the NGINX Pods. The Deployment assigns this label to its Pods, allowing the Service to select the correct backends and route traffic to them.
 
 **2. Why must the Pods be ready before they can receive Service traffic?**
 
-Add your answer here.
+Pods must be ready to ensure they can successfully handle incoming requests. Kubernetes uses readiness probes to determine whether a Pod is ready to serve traffic and excludes NotReady Pods from ready Service backends, helping prevent requests from reaching unhealthy or improperly configured application instances.
 
 **3. What port does the NGINX container listen on?**
 
-Add your answer here.
+The NGINX container listens on port 80, which handles HTTP traffic. The Service can forward incoming requests to this container port using targetPort: 80.
 
 ---
 
@@ -90,19 +90,21 @@ Add your screenshot here.
 
 **1. What is the purpose of `type: NodePort`?**
 
-Add your answer here.
+type: NodePort exposes the Service through a port on each cluster node, allowing external clients to access the application using a node’s IP address and the assigned NodePort, subject to network and firewall configuration.
 
 **2. What is the difference between `port`, `targetPort`, and `nodePort`?**
 
-Add your answer here.
+port: 80 — The port exposed by the Kubernetes Service.
+targetPort: 80 — The port on the NGINX Pods where traffic is forwarded.
+nodePort: 30651 — The port opened on each cluster node for accessing the Service externally.
 
 **3. What NodePort was assigned or selected in your environment?**
 
-Add your answer here.
+Kubernetes automatically assigned 30651 to the nginx-svc-nodeport Service.
 
 **4. Why do Service endpoints need ready Pods?**
 
-Add your answer here.
+Ready Pods can receive and process application traffic. Kubernetes uses readiness probes to determine whether Pods are ready and excludes unready Pods from the Service's ready endpoints, helping prevent requests from being sent to Pods that cannot serve them.
 
 ---
 
@@ -136,15 +138,15 @@ Add your screenshot here.
 
 **1. Which node IP and NodePort did you test?**
 
-Add your answer here.
+I tested the internal node IP 172.18.0.3 with NodePort 30651. The request from the tester Pod succeeded and returned the default NGINX welcome page.
 
 **2. Was your laptop able to reach the NodePort directly? Explain your result.**
 
-Add your answer here.
+No. The direct request to http://172.18.0.3:30651 timed out after five seconds. The Docker Desktop Kubernetes node uses a managed container network, and its internal IP was not directly reachable from my laptop environment. However, the in-cluster test succeeded.
 
 **3. Why can external NodePort access behave differently in Minikube, kind, Docker Desktop, and cloud clusters?**
 
-Add your answer here.
+No. The direct request to http://172.18.0.3:30651 timed out after five seconds. The Docker Desktop Kubernetes node uses a managed container network, and its internal IP was not directly reachable from my laptop environment. However, the in-cluster test succeeded.
 
 ---
 
@@ -178,15 +180,15 @@ Add your screenshot here.
 
 **1. Why did the Service endpoints become empty?**
 
-Add your answer here.
+The endpoints became empty because the Service selector was changed to app: does-not-match, which did not match the labels on the NGINX Pods. Kubernetes therefore had no matching backend Pods to route traffic to.
 
 **2. Why is NodePort only useful when matching ready Pods exist?**
 
-Add your answer here.
+NodePort provides an entry point for traffic through a cluster node, but the Service needs matching, ready backend Pods to handle requests. Without usable endpoints, requests cannot reach the application.
 
 **3. How did you restore the backend connectivity?**
 
-Add your answer here.
+I reapplied the original 01-nginx-svc-nodeport.yaml manifest, restoring the selector to app: nginx. I verified that both NGINX Pod endpoints returned with ready: true and tested the NodePort again from the tester Pod. The request successfully returned the NGINX welcome page.
 
 ---
 
@@ -212,15 +214,15 @@ Add your screenshot here.
 
 **1. What happened after you deleted one Pod?**
 
-Add your answer here.
+When I deleted one NGINX Pod, Kubernetes automatically created a replacement to maintain the Deployment’s desired replica count of two. The remaining Pod stayed healthy while the replacement was created.
 
 **2. Which Kubernetes resource created the replacement Pod?**
 
-Add your answer here.
+The Deployment’s ReplicaSet created the replacement Pod to maintain the desired number of replicas.
 
 **3. Why can the NodePort Service continue working during Pod churn?**
 
-Add your answer here.
+The NodePort Service selects matching, ready Pods as endpoints. The remaining healthy Pod could continue handling requests while Kubernetes replaced the deleted Pod. Once the replacement became ready, it was added as a Service endpoint. The repeated in-cluster requests returned HTTP/1.1 200 OK before deletion, and both endpoints were present after recovery.
 
 ---
 
@@ -238,7 +240,7 @@ Add your screenshot here.
 
 #### Linkedin post link
 
-Add your Linkdin post link.
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_kubernetes-devops-cloudcomputing-share-7519381118953979904-wS90/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 
