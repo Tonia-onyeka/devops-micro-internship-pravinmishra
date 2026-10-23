@@ -235,31 +235,39 @@ Observe how a new Pod that fails readiness is excluded from ready Service backen
 
 #### Screenshot 13 — Output showing the Deployment scaled to one ready Pod
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task6.ss13.png)
+
 
 ---
 
 #### Screenshot 14 — Completed `03-readiness-broken.yaml` patch file
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task6.ss14.png)
+
 
 ---
 
 #### Screenshot 15 — Output showing the expected incomplete rollout or NotReady Pod
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task6.ss15.png)
+
 
 ---
 
 #### Screenshot 16 — EndpointSlice output showing the healthy Pod with `ready: true` and the new NotReady Pod with `ready: false`
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task6.ss16.png)
+
+![Screenshot](screenshots/Ass7.Task6.ss16i.png)
+
+
 
 ---
 
 #### Screenshot 17 — Service EndpointSlice output showing ready backends after restoring the Deployment
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Task6.ss17.png)
+
 
 ---
 
@@ -289,7 +297,8 @@ Share what you learned about ClusterIP Services, Kubernetes DNS, selectors, and 
 
 #### Screenshot 18 — Published LinkedIn post
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass7.Linkedin.png)
+
 
 #### Linkedin post link
 

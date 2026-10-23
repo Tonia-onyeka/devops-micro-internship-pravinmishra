@@ -20,7 +20,7 @@ Create and enter a dedicated directory for the NodePort Service lab.
 
 #### Screenshot 1 — Terminal showing that you are working inside `~/k8s-labs/services/nodeport`
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task1.ss1.png)
 
 ### Notes
 
@@ -44,13 +44,15 @@ Create a healthy NGINX Deployment that can act as the backend for the NodePort S
 
 #### Screenshot 2 — Completed `00-nginx-deploy.yaml` manifest
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task2.ss2.png)
+
 
 ---
 
 #### Screenshot 3 — Output showing successful rollout and two ready NGINX Pods
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task2.ss3.png)
+
 
 ### Notes
 
@@ -78,13 +80,18 @@ Create a NodePort Service that exposes the NGINX application through a port on e
 
 #### Screenshot 4 — Completed `01-nginx-svc-nodeport.yaml` manifest
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task3.ss4.png)
+
 
 ---
 
 #### Screenshot 5 — Output showing the NodePort Service and its endpoints or EndpointSlices
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task3.ss5.png)
+
+![Screenshot](screenshots/Ass8.Task3.ss5i.png)
+
+
 
 ### Notes
 
@@ -118,13 +125,15 @@ Find a reachable node IP and access the NodePort Service.
 
 #### Screenshot 6 — Output of `kubectl get nodes -o wide`
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task4.ss6.png)
+
 
 ---
 
 #### Screenshot 7 — Output showing the `tester` Pod running
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task4.ss7.png)
+
 
 ---
 
@@ -132,7 +141,8 @@ Add your screenshot here.
 
 If neither route is supported by your environment, include the failed request output and ready endpoint evidence, and explain the limitation in your Notes.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task4.ss8.png)
+
 
 ### Notes
 
@@ -162,19 +172,25 @@ Complete the Evidence and Notes below only if you attempted this optional task.
 
 #### Screenshot 9 — `02-nginx-svc-selector-broken.yaml` showing the incorrect selector
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task5.ss9.png)
+
 
 ---
 
 #### Screenshot 10 — Empty endpoints or EndpointSlice output after applying the broken selector
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task5.ss10.png)
+
 
 ---
 
 #### Screenshot 11 — Restored endpoints or EndpointSlices after applying the original Service manifest
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task5.ss11.png)
+
+![Screenshot](screenshots/Ass8.Task5.ss11i.png)
+
+
 
 ### Notes
 
@@ -202,13 +218,15 @@ Delete one NGINX Pod and observe its replacement while the Service continues rou
 
 #### Screenshot 12 — Output of the Pod deletion command
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task6.ss12.png)
+
 
 ---
 
 #### Screenshot 13 — Output showing the replacement Pod and two running, ready Pods
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.Task6.ss13.png)
+
 
 ### Notes
 
@@ -236,7 +254,8 @@ Share what you learned about NodePort Services, backend Pods, and network access
 
 #### Screenshot 14 — Published LinkedIn post about your NodePort Service lab
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass8.LinkedIn.png)
+
 
 #### Linkedin post link
 

@@ -20,7 +20,8 @@ Create a small AKS cluster for this lab, or connect to an existing approved AKS 
 
 #### Screenshot 1 — Output of `kubectl get nodes` showing ready AKS node(s)
 
-Add your screenshot here.
+![Screenshot](screenshots/)
+
 
 ### Notes
 
