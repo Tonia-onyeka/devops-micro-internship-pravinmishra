@@ -235,11 +235,11 @@ Share what you learned about exposing an NGINX application publicly through a Lo
 
 #### Screenshot 14 — Published LinkedIn post about your LoadBalancer lab on AKS
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass9.LinkedIn.png)
 
 #### LinkedIn post link
 
-Add your link here.
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_devops-kubernetes-azure-share-7519713169942958080-DZX_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 

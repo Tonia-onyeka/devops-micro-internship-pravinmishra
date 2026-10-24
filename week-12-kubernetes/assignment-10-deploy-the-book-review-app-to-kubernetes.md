@@ -12,7 +12,7 @@ Deploy the Book Review App as a production-style three-tier application using Ku
 
 ## Submission Details
 
-**Full Name:** Add your full name here.
+**Full Name:** Anthonia Akwuohia
 
 **Kubernetes Platform:** Add your platform here.
 
@@ -38,7 +38,9 @@ Prepare the cluster, application source, container images, and tooling needed fo
 
 #### Screenshot 1 — Active Kubernetes context and Ready nodes
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task1.ss1.png)
+
+![Screenshot](screenshots/Ass10.Task1.ss2.png)
 
 ---
 
@@ -60,7 +62,7 @@ Document the workloads, networking, configuration, storage, and permitted commun
 
 #### Screenshot 3 — Completed Kubernetes architecture diagram
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task2.ss3.jpg)
 
 ---
 
