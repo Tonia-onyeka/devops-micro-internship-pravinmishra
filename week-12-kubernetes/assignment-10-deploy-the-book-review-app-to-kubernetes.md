@@ -180,31 +180,33 @@ Prove that the frontend, backend, and MySQL database work together and collect o
 
 #### Screenshot 14 — `kubectl get all` output for the book-review namespace
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task8.ss14.png)
 
 ---
 
 #### Screenshot 15 — Functional Book Review App in the browser with the URL visible, including evidence of a successful user flow
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task8.ss15.png)
 
 ---
 
 #### Screenshot 16 — Frontend or Nginx container logs
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task8.ss16.png)
 
 ---
 
 #### Screenshot 17 — Backend logs and evidence of a successful database-backed operation
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task8.ss17.png)
+
+![Screenshot](screenshots/Ass10.Task8.ss17i.png)
 
 ---
 
 #### Screenshot 18 — Optional: Kubernetes dashboard
 
-Add your screenshot here, or write “Not attempted.”
+Note: Kubernetes Dashboard was not installed in the Docker Desktop cluster, so no Dashboard screenshot was captured. Application health and deployment status were verified using kubectl commands and the running application in the browser instead.
 
 Multiple images may be included under a screenshot number when needed to demonstrate the complete user flow.
 
@@ -220,7 +222,19 @@ Add selected improvements without breaking the required three-tier architecture.
 
 #### Screenshot 19 — Optional: Evidence of selected Helm, HPA, probe, or TLS improvements
 
-Add your screenshot here, or write “Not attempted.”
+**Screenshot 19 — Optional Production Improvements**
+
+The Book Review application was enhanced and validated on Docker Desktop Kubernetes.
+
+- **Readiness probes:** Configured for the Next.js frontend, Nginx, and backend to help Kubernetes determine when containers are ready to serve traffic.
+- **Resource management:** CPU and memory requests and limits were configured for frontend and backend containers.
+- **Network security:** A NetworkPolicy restricts backend ingress to frontend Pods on TCP port 3001.
+- **Availability and recovery:** Both frontend and backend Deployments have two available replicas. Backend recovery was verified after a controlled restart.
+- **Three-tier architecture:** Frontend, backend, and MySQL remain separate workloads communicating through Kubernetes Services.
+
+**Validation result:** Both frontend and backend Deployments reported 2/2 available replicas. The application successfully loaded books, supported user authentication and review submission, and retained submitted reviews after a refresh and backend restart.
+
+**Not implemented:** Helm packaging, HPA, TLS/Ingress, and liveness probes were not included in this optional improvement stage.
 
 ---
 
@@ -234,11 +248,11 @@ Explain your three-tier architecture, demonstrate the working application, and s
 
 #### Screenshot 20 — Published LinkedIn post about your Book Review App deployment on Kubernetes
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.LinkedIn.png)
 
 ### LinkedIn Post URL
 
-Add your published LinkedIn post URL here.
+https://www.linkedin.com/posts/anthonia-akwuohia-5b00681b0_kubernetes-devops-docker-share-7520508114056441856-NCRA/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEhX1QBTHiW-kQPmKjn3MVixQzj4IzJO1Q
 
 ---
 
@@ -248,31 +262,89 @@ Add your published LinkedIn post URL here.
 
 Describe the application components and user flows you successfully deployed and tested.
 
-Add your summary here.
+Successfully deployed and tested a three-tier Book Review application on Docker Desktop Kubernetes in the book-review namespace.
+
+Frontend: Deployed the Next.js application with Nginx as a reverse proxy, running two frontend replicas.
+
+Backend: Deployed two backend replicas to handle API requests and application logic.
+
+Database: Deployed MySQL using a StatefulSet and persistent volume claim, with configuration and credentials managed through a ConfigMap and Kubernetes Secret.
+
+Services and networking: Created Kubernetes Services for frontend, backend, and MySQL communication.
+
+User flows: Verified book listings, user registration, login, book details, and review submission.
+
+Persistence: Confirmed that submitted reviews remained visible after refreshing the page and restarting the backend.
+
+Validation: Verified successful API responses, database connectivity, and healthy frontend and backend Deployments with 2/2 available replicas.
+
+The application was accessed locally through port-forwarding at http://localhost:8080.
 
 ## Issues and Fixes
 
 Describe the main issues encountered, their causes, and how you resolved them.
 
-Add your summary here.
+Frontend API routing: Incorrect API path construction caused a routing issue. Updated the frontend API request to use /api/books correctly.
+
+CORS registration failure: Registration initially failed because the backend did not allow the frontend's http://localhost:8080 origin. Updated ALLOWED_ORIGINS in the ConfigMap to include both http://localhost:3000 and http://localhost:8080, then restarted the backend Deployment. Registration and login subsequently worked.
+
+NetworkPolicy testing: A temporary test Pod could not access the backend because it did not have the required app=frontend label. Verified that the actual frontend Pods could access the backend while unrelated Pods were restricted.
+
+Local networking: Used Kubernetes port-forwarding to access the frontend from the host browser without exposing the application publicly.
 
 ## Tools and Sources Used
 
 List the documentation and tools that helped you complete the assignment.
 
-Add your tools and sources here.
+Docker Desktop and Docker Desktop Kubernetes
+
+Ubuntu on WSL
+
+Kubernetes CLI (kubectl)
+
+Docker for building and publishing container images
+
+Docker Hub for storing frontend and backend images
+
+YAML for Kubernetes Deployments, Services, ConfigMaps, Secrets, StatefulSet, and NetworkPolicy
+
+Browser-based application testing
+
+Kubernetes resource descriptions and container logs for troubleshooting
+
+Official Kubernetes documentation: https://kubernetes.io/docs/
+
+Official Docker documentation: https://docs.docker.com/
+
+Official NGINX documentation: https://nginx.org/en/docs/
 
 ## Optional Improvements
 
 Describe any optional improvements implemented, or write “Not attempted.”
 
-Add your summary here.
+Implemented and validated selected production improvements:
+
+Readiness probes for the Next.js frontend, Nginx, and backend.
+
+CPU and memory requests and limits for application containers.
+
+NetworkPolicy restricting backend ingress to frontend Pods on TCP port 3001.
+
+Two replicas each for the frontend and backend, with successful recovery after a controlled backend restart.
+
+Persistent storage for MySQL through a persistent volume claim.
+
+Helm chart packaging, Horizontal Pod Autoscaling (HPA), TLS through Ingress and cert-manager, and liveness probes were not implemented.
 
 ## Cleanup or Reuse Plan
 
 State which resources were removed or why the environment is being retained.
 
-Add your cleanup status or reuse plan here.
+Cleanup or Reuse Plan
+
+The Docker Desktop Kubernetes environment is being retained for future learning, testing, and reuse. The book-review namespace and its application resources, including the MySQL StatefulSet and persistent storage, have not been intentionally removed.
+
+The frontend is accessed through local port-forwarding, and the application is not publicly exposed. Before future testing, I will verify the status of the Pods, Services, Deployments, and persistent storage. I will remove the lab resources and persistent data when they are no longer needed, after confirming that no required data must be retained.
 
 ---
 
