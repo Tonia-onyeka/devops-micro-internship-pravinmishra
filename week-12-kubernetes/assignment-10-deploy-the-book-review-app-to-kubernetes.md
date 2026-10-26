@@ -76,13 +76,15 @@ Provide application configuration and credentials without embedding sensitive va
 
 #### Screenshot 4 — ConfigMap configuration or describe output showing non-sensitive values
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task3.ss4.png)
+
+![Screenshot](screenshots/Ass10.Task3.ss4i.png)
 
 ---
 
 #### Screenshot 5 — Secret references or describe output showing names and keys without sensitive values
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task3.ss5.png)
 
 ---
 
@@ -96,13 +98,13 @@ Provide persistent MySQL storage and allow the backend to connect without exposi
 
 #### Screenshot 6 — Managed MySQL status or MySQL StatefulSet and PVC status
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task4.ss6.png)
 
 ---
 
 #### Screenshot 7 — Successful database connectivity or schema verification with credentials hidden
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task4.ss7.png)
 
 ---
 
@@ -116,7 +118,7 @@ Run one or two Node.js/Express backend replicas on port 3001 and expose them thr
 
 #### Screenshot 8 — Backend Deployment, ready Pods, and internal Service
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task5.ss8.png)
 
 ---
 
@@ -124,7 +126,7 @@ Add your screenshot here.
 
 If the application does not log successful database connections, provide a successful database-backed request alongside the startup logs.
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task5.ss9.png)
 
 ---
 
@@ -138,13 +140,13 @@ Run the Next.js frontend behind Nginx on port 80 and proxy API requests to the i
 
 #### Screenshot 10 — Frontend Deployment and Ready Pods
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task6.ss10.png)
 
 ---
 
 #### Screenshot 11 — Nginx reverse-proxy configuration showing the internal backend Service name and port 3001
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task6.ss11.png)
 
 ---
 
@@ -158,13 +160,13 @@ Expose the frontend and enforce the intended communication path between applicat
 
 #### Screenshot 12 — Frontend LoadBalancer or Ingress configuration and assigned endpoint, or documented local access method
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task7.ss12.png)
 
 ---
 
 #### Screenshot 13 — Internal backend Service and NetworkPolicy or equivalent restriction, with access-test evidence
 
-Add your screenshot here.
+![Screenshot](screenshots/Ass10.Task7.ss13.png)
 
 ---
 
