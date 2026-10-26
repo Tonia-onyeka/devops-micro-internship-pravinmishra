@@ -157,7 +157,13 @@ Today, I deployed NGINX, configured rolling updates, updated the container image
 
 I also scaled my Deployment from two Pods to five and back to two!
 
-[PASTE YOUR GENERATED LEADERBOARD MESSAGE AND LINK HERE]
+🚀 Practicing Kubernetes Deployments! ☸️
+
+Worked on NGINX, rolling updates, rollbacks, and scaling Pods from 2 to 5 and back to 2.
+
+🏆 My DMI Progress: [https://dmi.pravinmishra.com/s/Tonia-onyeka.html]
+
+#DMIByPravinMishra #DevOps #Kubernetes
 
 #DMIByPravinMishra #DevOps #Kubernetes
 
