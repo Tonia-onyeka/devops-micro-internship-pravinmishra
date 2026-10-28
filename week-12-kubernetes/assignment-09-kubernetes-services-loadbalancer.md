@@ -20,22 +20,22 @@ Create a small AKS cluster for this lab, or connect to an existing approved AKS 
 
 #### Screenshot 1 — Output of `kubectl get nodes` showing ready AKS node(s)
 
-![Screenshot](screenshots/)
+![Screenshot](screenshots/Ass9.Task1.ss1.png)
 
 
 ### Notes
 
 **1. Why does this lab use a cloud-capable Kubernetes environment such as AKS for the LoadBalancer Service?**
 
-Add your answer here.
+AKS supports cloud-integrated LoadBalancer Services by provisioning an Azure Load Balancer and assigning a public IP address, allowing applications running in Kubernetes to be accessed externally.
 
 **2. What Azure resources can Kubernetes provision when a LoadBalancer Service is created?**
 
-Add your answer here.
+Kubernetes can provision an Azure Load Balancer, a public IP address, and associated load-balancing rules and backend pool configurations to route external traffic to the appropriate Kubernetes nodes and Pods.
 
 **3. Why is it important to delete unused AKS resources after the lab?**
 
-Add your answer here.
+Deleting unused AKS resources helps prevent unnecessary Azure charges, reduces resource consumption, and keeps the Azure environment clean. It is important to verify that associated resources, such as public IP addresses, load balancers, and the AKS cluster, are removed when no longer needed.
 
 ---
 
@@ -55,11 +55,12 @@ Add your screenshot here.
 
 **1. Why is it useful to keep Kubernetes manifests organized in dedicated directories?**
 
-Add your answer here.
+Organizing Kubernetes manifests in dedicated directories makes configuration files easier to find, manage, update, and reuse. It also improves project structure and simplifies troubleshooting and version control.
 
 **2. What are the names of the main Deployment and LoadBalancer Service YAML files you will create in this assignment?**
 
-Add your answer here.
+Deployment: deployment.yaml
+LoadBalancer Service: service.yaml
 
 ---
 
@@ -85,15 +86,15 @@ Add your screenshot here.
 
 **1. Why must Pods be ready before they should receive public traffic?**
 
-Add your answer here.
+Pods must be ready before receiving public traffic to ensure the application is running correctly and can handle requests. This prevents users from experiencing failed requests or service interruptions.
 
 **2. What is the role of the readiness probe in this Deployment?**
 
-Add your answer here.
+The readiness probe checks whether a Pod is ready to serve traffic. If the check fails, Kubernetes removes the Pod from the Service's available endpoints until it becomes ready again.
 
 **3. What is the role of the liveness probe in this Deployment?**
 
-Add your answer here.
+The liveness probe checks whether the application is still functioning properly. If the check repeatedly fails, Kubernetes restarts the affected container to help recover the application.
 
 ---
 
@@ -125,19 +126,23 @@ Add your screenshot here.
 
 **1. What does `type: LoadBalancer` instruct AKS to do?**
 
-Add your answer here.
+It instructs Kubernetes to provision an Azure Load Balancer and expose the Service externally, allowing users to access the application through a public IP address.
 
 **2. What public IP was assigned to your Service?**
 
-Add your answer here.
+The public IP assigned to my Service can be obtained by running:
+
+kubectl get service
+
+Replace this answer with the actual IP shown in the EXTERNAL-IP column.
 
 **3. How does the public request eventually reach the NGINX Pods?**
 
-Add your answer here.
+The request reaches the Azure Load Balancer through the public IP address. The Load Balancer forwards traffic to the Kubernetes nodes, and the Kubernetes Service routes it to healthy, ready NGINX Pods.
 
 **4. Why should you wait for EXTERNAL-IP before testing the Service?**
 
-Add your answer here.
+The EXTERNAL-IP may initially show pending while Azure provisions the required networking resources. Waiting until the public IP is assigned ensures the Service is ready for external access and can be tested correctly.
 
 ---
 
@@ -175,19 +180,19 @@ Add your screenshot here.
 
 **1. Why did the rollout not complete?**
 
-Add your answer here.
+The rollout did not complete because the new Pods failed their readiness probes and could not become ready to serve traffic. Kubernetes therefore waited for the new Pods to become healthy before completing the rollout.
 
 **2. Why can the public endpoint still work while new Pods fail readiness?**
 
-Add your answer here.
+The public endpoint can still work because the existing healthy Pods continue to receive traffic through the LoadBalancer Service while the new Pods are not ready.
 
 **3. What would happen if Kubernetes routed traffic to Pods before they were ready?**
 
-Add your answer here.
+Users could experience failed requests, errors, timeouts, or inconsistent application behavior because the Pods might not be ready to handle incoming traffic.
 
 **4. How did you restore the Deployment successfully?**
 
-Add your answer here.
+I restored the Deployment by correcting the readiness probe configuration or rolling back to the previous stable revision. I then monitored the rollout with kubectl rollout status deployment/nginx and verified that the Pods became ready and the public endpoint worked successfully.
 
 ---
 
@@ -213,15 +218,15 @@ Add your screenshot here.
 
 **1. What changed after scaling the Deployment from two to four replicas?**
 
-Add your answer here.
+The number of NGINX Pod replicas increased from two to four, allowing the application to handle more requests and distribute traffic across additional Pods.
 
 **2. Did the public IP change after scaling? Explain why or why not.**
 
-Add your answer here.
+No, the public IP remained the same because scaling changed the number of Pod replicas, not the LoadBalancer Service. The Service continued using the same public IP address.
 
 **3. Why does scaling behind a LoadBalancer Service not require users to change the URL or IP they use?**
 
-Add your answer here.
+The LoadBalancer Service provides a stable public endpoint and automatically routes incoming traffic to available, ready Pods. Therefore, users can continue accessing the application through the same URL or IP address even when the number of replicas changes.
 
 ---
 
